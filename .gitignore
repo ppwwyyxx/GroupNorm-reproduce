@@ -1,0 +1,3 @@
+train_log
+*.pyc
+__pycache__

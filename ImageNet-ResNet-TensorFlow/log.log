@@ -1,0 +1,1935 @@
+[1219 18:00:20 @imagenet-resnet-gn.py:54] Running on 8 towers. Batch size per tower: 32
+[1219 18:00:21 @ilsvrc.py:128] [ILSVRC12] Assuming directory /XXX/imagenet/val has 'train' structure.
+[1219 18:00:21 @imagenet-resnet-gn.py:61] BASELR: 0.1
+[1219 18:00:21 @training.py:52] [DataParallel] Training a model of 8 towers.
+[1219 18:00:21 @interface.py:34] Automatically applying QueueInput on the DataFlow.
+[1219 18:00:21 @interface.py:46] Automatically applying StagingInput on the DataFlow.
+[1219 18:00:21 @input_source.py:219] Setting up the queue 'QueueInput/input_queue' for CPU prefetching ...
+[1219 18:00:21 @training.py:112] Building graph for training tower 0 on device /gpu:0 ...
+[1219 18:00:21 @registry.py:121] conv0 input: [None, 3, 230, 230]
+[1219 18:00:21 @registry.py:121] conv0/gn input: [None, 64, 112, 112]
+[1219 18:00:21 @registry.py:129] conv0/gn output: [None, 64, 112, 112]
+[1219 18:00:21 @registry.py:129] conv0 output: [None, 64, 112, 112]
+[1219 18:00:21 @registry.py:121] pool0 input: [None, 64, 114, 114]
+[1219 18:00:21 @registry.py:129] pool0 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv1 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv1/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv1/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv1 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv2 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv2/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv2/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv2 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv3 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/conv3/gn input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv3/gn output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/conv3 output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/convshortcut input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block0/convshortcut/gn input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/convshortcut/gn output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block0/convshortcut output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv1 input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv1/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv1/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv1 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv2 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv2/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv2/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv2 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv3 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block1/conv3/gn input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv3/gn output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block1/conv3 output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv1 input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv1/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv1/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv1 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv2 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv2/gn input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv2/gn output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv2 output: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv3 input: [None, 64, 56, 56]
+[1219 18:00:21 @registry.py:121] group0/block2/conv3/gn input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv3/gn output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:129] group0/block2/conv3 output: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group1/block0/conv1 input: [None, 256, 56, 56]
+[1219 18:00:21 @registry.py:121] group1/block0/conv1/gn input: [None, 128, 56, 56]
+[1219 18:00:21 @registry.py:129] group1/block0/conv1/gn output: [None, 128, 56, 56]
+[1219 18:00:21 @registry.py:129] group1/block0/conv1 output: [None, 128, 56, 56]
+[1219 18:00:21 @registry.py:121] group1/block0/conv2 input: [None, 128, 58, 58]
+[1219 18:00:21 @registry.py:121] group1/block0/conv2/gn input: [None, 128, 28, 28]
+[1219 18:00:21 @registry.py:129] group1/block0/conv2/gn output: [None, 128, 28, 28]
+[1219 18:00:21 @registry.py:129] group1/block0/conv2 output: [None, 128, 28, 28]
+[1219 18:00:21 @registry.py:121] group1/block0/conv3 input: [None, 128, 28, 28]
+[1219 18:00:21 @registry.py:121] group1/block0/conv3/gn input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block0/conv3/gn output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block0/conv3 output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block0/convshortcut input: [None, 256, 56, 56]
+[1219 18:00:22 @registry.py:121] group1/block0/convshortcut/gn input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block0/convshortcut/gn output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block0/convshortcut output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv1 input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv1/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv1/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv1 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv2 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv2/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv2/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv2 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv3 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block1/conv3/gn input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv3/gn output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block1/conv3 output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv1 input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv1/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv1/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv1 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv2 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv2/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv2/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv2 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv3 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block2/conv3/gn input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv3/gn output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block2/conv3 output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv1 input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv1/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv1/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv1 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv2 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv2/gn input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv2/gn output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv2 output: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv3 input: [None, 128, 28, 28]
+[1219 18:00:22 @registry.py:121] group1/block3/conv3/gn input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv3/gn output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:129] group1/block3/conv3 output: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group2/block0/conv1 input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group2/block0/conv1/gn input: [None, 256, 28, 28]
+[1219 18:00:22 @registry.py:129] group2/block0/conv1/gn output: [None, 256, 28, 28]
+[1219 18:00:22 @registry.py:129] group2/block0/conv1 output: [None, 256, 28, 28]
+[1219 18:00:22 @registry.py:121] group2/block0/conv2 input: [None, 256, 30, 30]
+[1219 18:00:22 @registry.py:121] group2/block0/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block0/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block0/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block0/convshortcut input: [None, 512, 28, 28]
+[1219 18:00:22 @registry.py:121] group2/block0/convshortcut/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/convshortcut/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block0/convshortcut output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv1/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv1/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv1 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv2 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block1/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block1/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv1/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv1/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv1 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv2 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block2/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block2/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv1/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv1/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv1 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv2 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block3/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block3/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv1/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv1/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv1 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv2 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block4/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block4/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv1/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv1/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv1 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv2 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv2/gn input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv2/gn output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv2 output: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv3 input: [None, 256, 14, 14]
+[1219 18:00:22 @registry.py:121] group2/block5/conv3/gn input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv3/gn output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:129] group2/block5/conv3 output: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group3/block0/conv1 input: [None, 1024, 14, 14]
+[1219 18:00:22 @registry.py:121] group3/block0/conv1/gn input: [None, 512, 14, 14]
+[1219 18:00:22 @registry.py:129] group3/block0/conv1/gn output: [None, 512, 14, 14]
+[1219 18:00:22 @registry.py:129] group3/block0/conv1 output: [None, 512, 14, 14]
+[1219 18:00:22 @registry.py:121] group3/block0/conv2 input: [None, 512, 16, 16]
+[1219 18:00:22 @registry.py:121] group3/block0/conv2/gn input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/conv2/gn output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/conv2 output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block0/conv3 input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block0/conv3/gn input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/conv3/gn output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/conv3 output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block0/convshortcut input: [None, 1024, 14, 14]
+[1219 18:00:23 @registry.py:121] group3/block0/convshortcut/gn input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/convshortcut/gn output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block0/convshortcut output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv1 input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv1/gn input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv1/gn output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv1 output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv2 input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv2/gn input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv2/gn output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv2 output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv3 input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block1/conv3/gn input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv3/gn output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block1/conv3 output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv1 input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv1/gn input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv1/gn output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv1 output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv2 input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv2/gn input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv2/gn output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv2 output: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv3 input: [None, 512, 7, 7]
+[1219 18:00:23 @registry.py:121] group3/block2/conv3/gn input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv3/gn output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] group3/block2/conv3 output: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:121] gap input: [None, 2048, 7, 7]
+[1219 18:00:23 @registry.py:129] gap output: [None, 2048]
+[1219 18:00:23 @registry.py:121] linear input: [None, 2048]
+[1219 18:00:23 @registry.py:129] linear output: [None, 1000]
+[1219 18:00:23 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:00:23 @regularize.py:20] The following tensors will be regularized: conv0/W:0, conv0/gn/beta:0, conv0/gn/gamma:0, group0/block0/conv1/W:0, group0/block0/conv1/gn/beta:0, group0/block0/conv1/gn/gamma:0, group0/block0/conv2/W:0, group0/block0/conv2/gn/beta:0, group0/block0/conv2/gn/gamma:0, group0/block0/conv3/W:0, group0/block0/conv3/gn/beta:0, group0/block0/conv3/gn/gamma:0, group0/block0/convshortcut/W:0, group0/block0/convshortcut/gn/beta:0, group0/block0/convshortcut/gn/gamma:0, group0/block1/conv1/W:0, group0/block1/conv1/gn/beta:0, group0/block1/conv1/gn/gamma:0, group0/block1/conv2/W:0, group0/block1/conv2/gn/beta:0, group0/block1/conv2/gn/gamma:0, group0/block1/conv3/W:0, group0/block1/conv3/gn/beta:0, group0/block1/conv3/gn/gamma:0, group0/block2/conv1/W:0, group0/block2/conv1/gn/beta:0, group0/block2/conv1/gn/gamma:0, group0/block2/conv2/W:0, group0/block2/conv2/gn/beta:0, group0/block2/conv2/gn/gamma:0, group0/block2/conv3/W:0, group0/block2/conv3/gn/beta:0, group0/block2/conv3/gn/gamma:0, group1/block0/conv1/W:0, group1/block0/conv1/gn/beta:0, group1/block0/conv1/gn/gamma:0, group1/block0/conv2/W:0, group1/block0/conv2/gn/beta:0, group1/block0/conv2/gn/gamma:0, group1/block0/conv3/W:0, group1/block0/conv3/gn/beta:0, group1/block0/conv3/gn/gamma:0, group1/block0/convshortcut/W:0, group1/block0/convshortcut/gn/beta:0, group1/block0/convshortcut/gn/gamma:0, group1/block1/conv1/W:0, group1/block1/conv1/gn/beta:0, group1/block1/conv1/gn/gamma:0, group1/block1/conv2/W:0, group1/block1/conv2/gn/beta:0, group1/block1/conv2/gn/gamma:0, group1/block1/conv3/W:0, group1/block1/conv3/gn/beta:0, group1/block1/conv3/gn/gamma:0, group1/block2/conv1/W:0, group1/block2/conv1/gn/beta:0, group1/block2/conv1/gn/gamma:0, group1/block2/conv2/W:0, group1/block2/conv2/gn/beta:0, group1/block2/conv2/gn/gamma:0, group1/block2/conv3/W:0, group1/block2/conv3/gn/beta:0, group1/block2/conv3/gn/gamma:0, group1/block3/conv1/W:0, group1/block3/conv1/gn/beta:0, group1/block3/conv1/gn/gamma:0, group1/block3/conv2/W:0, group1/block3/conv2/gn/beta:0, group1/block3/conv2/gn/gamma:0, group1/block3/conv3/W:0, group1/block3/conv3/gn/beta:0, group1/block3/conv3/gn/gamma:0, group2/block0/conv1/W:0, group2/block0/conv1/gn/beta:0, group2/block0/conv1/gn/gamma:0, group2/block0/conv2/W:0, group2/block0/conv2/gn/beta:0, group2/block0/conv2/gn/gamma:0, group2/block0/conv3/W:0, group2/block0/conv3/gn/beta:0, group2/block0/conv3/gn/gamma:0, group2/block0/convshortcut/W:0, group2/block0/convshortcut/gn/beta:0, group2/block0/convshortcut/gn/gamma:0, group2/block1/conv1/W:0, group2/block1/conv1/gn/beta:0, group2/block1/conv1/gn/gamma:0, group2/block1/conv2/W:0, group2/block1/conv2/gn/beta:0, group2/block1/conv2/gn/gamma:0, group2/block1/conv3/W:0, group2/block1/conv3/gn/beta:0, group2/block1/conv3/gn/gamma:0, group2/block2/conv1/W:0, group2/block2/conv1/gn/beta:0, group2/block2/conv1/gn/gamma:0, group2/block2/conv2/W:0, group2/block2/conv2/gn/beta:0, group2/block2/conv2/gn/gamma:0, group2/block2/conv3/W:0, group2/block2/conv3/gn/beta:0, group2/block2/conv3/gn/gamma:0, group2/block3/conv1/W:0, group2/block3/conv1/gn/beta:0, group2/block3/conv1/gn/gamma:0, group2/block3/conv2/W:0, group2/block3/conv2/gn/beta:0, group2/block3/conv2/gn/gamma:0, group2/block3/conv3/W:0, group2/block3/conv3/gn/beta:0, group2/block3/conv3/gn/gamma:0, group2/block4/conv1/W:0, group2/block4/conv1/gn/beta:0, group2/block4/conv1/gn/gamma:0, group2/block4/conv2/W:0, group2/block4/conv2/gn/beta:0, group2/block4/conv2/gn/gamma:0, group2/block4/conv3/W:0, group2/block4/conv3/gn/beta:0, group2/block4/conv3/gn/gamma:0, group2/block5/conv1/W:0, group2/block5/conv1/gn/beta:0, group2/block5/conv1/gn/gamma:0, group2/block5/conv2/W:0, group2/block5/conv2/gn/beta:0, group2/block5/conv2/gn/gamma:0, group2/block5/conv3/W:0, group2/block5/conv3/gn/beta:0, group2/block5/conv3/gn/gamma:0, group3/block0/conv1/W:0, group3/block0/conv1/gn/beta:0, group3/block0/conv1/gn/gamma:0, group3/block0/conv2/W:0, group3/block0/conv2/gn/beta:0, group3/block0/conv2/gn/gamma:0, group3/block0/conv3/W:0, group3/block0/conv3/gn/beta:0, group3/block0/conv3/gn/gamma:0, group3/block0/convshortcut/W:0, group3/block0/convshortcut/gn/beta:0, group3/block0/convshortcut/gn/gamma:0, group3/block1/conv1/W:0, group3/block1/conv1/gn/beta:0, group3/block1/conv1/gn/gamma:0, group3/block1/conv2/W:0, group3/block1/conv2/gn/beta:0, group3/block1/conv2/gn/gamma:0, group3/block1/conv3/W:0, group3/block1/conv3/gn/beta:0, group3/block1/conv3/gn/gamma:0, group3/block2/conv1/W:0, group3/block2/conv1/gn/beta:0, group3/block2/conv1/gn/gamma:0, group3/block2/conv2/W:0, group3/block2/conv2/gn/beta:0, group3/block2/conv2/gn/gamma:0, group3/block2/conv3/W:0, group3/block2/conv3/gn/beta:0, group3/block2/conv3/gn/gamma:0, linear/W:0
+[1219 18:00:28 @training.py:112] Building graph for training tower 1 on device /gpu:1 ...
+[1219 18:00:30 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:00:34 @training.py:112] Building graph for training tower 2 on device /gpu:2 ...
+[1219 18:00:36 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:00:41 @training.py:112] Building graph for training tower 3 on device /gpu:3 ...
+[1219 18:00:43 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:00:47 @training.py:112] Building graph for training tower 4 on device /gpu:4 ...
+[1219 18:00:49 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:00:54 @training.py:112] Building graph for training tower 5 on device /gpu:5 ...
+[1219 18:00:56 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:01:00 @training.py:112] Building graph for training tower 6 on device /gpu:6 ...
+[1219 18:01:02 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:01:07 @training.py:112] Building graph for training tower 7 on device /gpu:7 ...
+[1219 18:01:08 @regularize.py:95] regularize_cost() found 160 variables to regularize.
+[1219 18:01:13 @utils.py:364] Will pack 161 gradients of total dimension=25557032 into 8 splits.
+[1219 18:01:23 @training.py:345] 'sync_variables_from_main_tower' includes 2254 operations.
+[1219 18:01:23 @model_utils.py:64] Trainable Variables:
+name                                   shape                   dim
+-------------------------------------  ------------------  -------
+conv0/W:0                              [7, 7, 3, 64]          9408
+conv0/gn/beta:0                        [64]                     64
+conv0/gn/gamma:0                       [64]                     64
+group0/block0/conv1/W:0                [1, 1, 64, 64]         4096
+group0/block0/conv1/gn/beta:0          [64]                     64
+group0/block0/conv1/gn/gamma:0         [64]                     64
+group0/block0/conv2/W:0                [3, 3, 64, 64]        36864
+group0/block0/conv2/gn/beta:0          [64]                     64
+group0/block0/conv2/gn/gamma:0         [64]                     64
+group0/block0/conv3/W:0                [1, 1, 64, 256]       16384
+group0/block0/conv3/gn/beta:0          [256]                   256
+group0/block0/conv3/gn/gamma:0         [256]                   256
+group0/block0/convshortcut/W:0         [1, 1, 64, 256]       16384
+group0/block0/convshortcut/gn/beta:0   [256]                   256
+group0/block0/convshortcut/gn/gamma:0  [256]                   256
+group0/block1/conv1/W:0                [1, 1, 256, 64]       16384
+group0/block1/conv1/gn/beta:0          [64]                     64
+group0/block1/conv1/gn/gamma:0         [64]                     64
+group0/block1/conv2/W:0                [3, 3, 64, 64]        36864
+group0/block1/conv2/gn/beta:0          [64]                     64
+group0/block1/conv2/gn/gamma:0         [64]                     64
+group0/block1/conv3/W:0                [1, 1, 64, 256]       16384
+group0/block1/conv3/gn/beta:0          [256]                   256
+group0/block1/conv3/gn/gamma:0         [256]                   256
+group0/block2/conv1/W:0                [1, 1, 256, 64]       16384
+group0/block2/conv1/gn/beta:0          [64]                     64
+group0/block2/conv1/gn/gamma:0         [64]                     64
+group0/block2/conv2/W:0                [3, 3, 64, 64]        36864
+group0/block2/conv2/gn/beta:0          [64]                     64
+group0/block2/conv2/gn/gamma:0         [64]                     64
+group0/block2/conv3/W:0                [1, 1, 64, 256]       16384
+group0/block2/conv3/gn/beta:0          [256]                   256
+group0/block2/conv3/gn/gamma:0         [256]                   256
+group1/block0/conv1/W:0                [1, 1, 256, 128]      32768
+group1/block0/conv1/gn/beta:0          [128]                   128
+group1/block0/conv1/gn/gamma:0         [128]                   128
+group1/block0/conv2/W:0                [3, 3, 128, 128]     147456
+group1/block0/conv2/gn/beta:0          [128]                   128
+group1/block0/conv2/gn/gamma:0         [128]                   128
+group1/block0/conv3/W:0                [1, 1, 128, 512]      65536
+group1/block0/conv3/gn/beta:0          [512]                   512
+group1/block0/conv3/gn/gamma:0         [512]                   512
+group1/block0/convshortcut/W:0         [1, 1, 256, 512]     131072
+group1/block0/convshortcut/gn/beta:0   [512]                   512
+group1/block0/convshortcut/gn/gamma:0  [512]                   512
+group1/block1/conv1/W:0                [1, 1, 512, 128]      65536
+group1/block1/conv1/gn/beta:0          [128]                   128
+group1/block1/conv1/gn/gamma:0         [128]                   128
+group1/block1/conv2/W:0                [3, 3, 128, 128]     147456
+group1/block1/conv2/gn/beta:0          [128]                   128
+group1/block1/conv2/gn/gamma:0         [128]                   128
+group1/block1/conv3/W:0                [1, 1, 128, 512]      65536
+group1/block1/conv3/gn/beta:0          [512]                   512
+group1/block1/conv3/gn/gamma:0         [512]                   512
+group1/block2/conv1/W:0                [1, 1, 512, 128]      65536
+group1/block2/conv1/gn/beta:0          [128]                   128
+group1/block2/conv1/gn/gamma:0         [128]                   128
+group1/block2/conv2/W:0                [3, 3, 128, 128]     147456
+group1/block2/conv2/gn/beta:0          [128]                   128
+group1/block2/conv2/gn/gamma:0         [128]                   128
+group1/block2/conv3/W:0                [1, 1, 128, 512]      65536
+group1/block2/conv3/gn/beta:0          [512]                   512
+group1/block2/conv3/gn/gamma:0         [512]                   512
+group1/block3/conv1/W:0                [1, 1, 512, 128]      65536
+group1/block3/conv1/gn/beta:0          [128]                   128
+group1/block3/conv1/gn/gamma:0         [128]                   128
+group1/block3/conv2/W:0                [3, 3, 128, 128]     147456
+group1/block3/conv2/gn/beta:0          [128]                   128
+group1/block3/conv2/gn/gamma:0         [128]                   128
+group1/block3/conv3/W:0                [1, 1, 128, 512]      65536
+group1/block3/conv3/gn/beta:0          [512]                   512
+group1/block3/conv3/gn/gamma:0         [512]                   512
+group2/block0/conv1/W:0                [1, 1, 512, 256]     131072
+group2/block0/conv1/gn/beta:0          [256]                   256
+group2/block0/conv1/gn/gamma:0         [256]                   256
+group2/block0/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block0/conv2/gn/beta:0          [256]                   256
+group2/block0/conv2/gn/gamma:0         [256]                   256
+group2/block0/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block0/conv3/gn/beta:0          [1024]                 1024
+group2/block0/conv3/gn/gamma:0         [1024]                 1024
+group2/block0/convshortcut/W:0         [1, 1, 512, 1024]    524288
+group2/block0/convshortcut/gn/beta:0   [1024]                 1024
+group2/block0/convshortcut/gn/gamma:0  [1024]                 1024
+group2/block1/conv1/W:0                [1, 1, 1024, 256]    262144
+group2/block1/conv1/gn/beta:0          [256]                   256
+group2/block1/conv1/gn/gamma:0         [256]                   256
+group2/block1/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block1/conv2/gn/beta:0          [256]                   256
+group2/block1/conv2/gn/gamma:0         [256]                   256
+group2/block1/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block1/conv3/gn/beta:0          [1024]                 1024
+group2/block1/conv3/gn/gamma:0         [1024]                 1024
+group2/block2/conv1/W:0                [1, 1, 1024, 256]    262144
+group2/block2/conv1/gn/beta:0          [256]                   256
+group2/block2/conv1/gn/gamma:0         [256]                   256
+group2/block2/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block2/conv2/gn/beta:0          [256]                   256
+group2/block2/conv2/gn/gamma:0         [256]                   256
+group2/block2/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block2/conv3/gn/beta:0          [1024]                 1024
+group2/block2/conv3/gn/gamma:0         [1024]                 1024
+group2/block3/conv1/W:0                [1, 1, 1024, 256]    262144
+group2/block3/conv1/gn/beta:0          [256]                   256
+group2/block3/conv1/gn/gamma:0         [256]                   256
+group2/block3/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block3/conv2/gn/beta:0          [256]                   256
+group2/block3/conv2/gn/gamma:0         [256]                   256
+group2/block3/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block3/conv3/gn/beta:0          [1024]                 1024
+group2/block3/conv3/gn/gamma:0         [1024]                 1024
+group2/block4/conv1/W:0                [1, 1, 1024, 256]    262144
+group2/block4/conv1/gn/beta:0          [256]                   256
+group2/block4/conv1/gn/gamma:0         [256]                   256
+group2/block4/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block4/conv2/gn/beta:0          [256]                   256
+group2/block4/conv2/gn/gamma:0         [256]                   256
+group2/block4/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block4/conv3/gn/beta:0          [1024]                 1024
+group2/block4/conv3/gn/gamma:0         [1024]                 1024
+group2/block5/conv1/W:0                [1, 1, 1024, 256]    262144
+group2/block5/conv1/gn/beta:0          [256]                   256
+group2/block5/conv1/gn/gamma:0         [256]                   256
+group2/block5/conv2/W:0                [3, 3, 256, 256]     589824
+group2/block5/conv2/gn/beta:0          [256]                   256
+group2/block5/conv2/gn/gamma:0         [256]                   256
+group2/block5/conv3/W:0                [1, 1, 256, 1024]    262144
+group2/block5/conv3/gn/beta:0          [1024]                 1024
+group2/block5/conv3/gn/gamma:0         [1024]                 1024
+group3/block0/conv1/W:0                [1, 1, 1024, 512]    524288
+group3/block0/conv1/gn/beta:0          [512]                   512
+group3/block0/conv1/gn/gamma:0         [512]                   512
+group3/block0/conv2/W:0                [3, 3, 512, 512]    2359296
+group3/block0/conv2/gn/beta:0          [512]                   512
+group3/block0/conv2/gn/gamma:0         [512]                   512
+group3/block0/conv3/W:0                [1, 1, 512, 2048]   1048576
+group3/block0/conv3/gn/beta:0          [2048]                 2048
+group3/block0/conv3/gn/gamma:0         [2048]                 2048
+group3/block0/convshortcut/W:0         [1, 1, 1024, 2048]  2097152
+group3/block0/convshortcut/gn/beta:0   [2048]                 2048
+group3/block0/convshortcut/gn/gamma:0  [2048]                 2048
+group3/block1/conv1/W:0                [1, 1, 2048, 512]   1048576
+group3/block1/conv1/gn/beta:0          [512]                   512
+group3/block1/conv1/gn/gamma:0         [512]                   512
+group3/block1/conv2/W:0                [3, 3, 512, 512]    2359296
+group3/block1/conv2/gn/beta:0          [512]                   512
+group3/block1/conv2/gn/gamma:0         [512]                   512
+group3/block1/conv3/W:0                [1, 1, 512, 2048]   1048576
+group3/block1/conv3/gn/beta:0          [2048]                 2048
+group3/block1/conv3/gn/gamma:0         [2048]                 2048
+group3/block2/conv1/W:0                [1, 1, 2048, 512]   1048576
+group3/block2/conv1/gn/beta:0          [512]                   512
+group3/block2/conv1/gn/gamma:0         [512]                   512
+group3/block2/conv2/W:0                [3, 3, 512, 512]    2359296
+group3/block2/conv2/gn/beta:0          [512]                   512
+group3/block2/conv2/gn/gamma:0         [512]                   512
+group3/block2/conv3/W:0                [1, 1, 512, 2048]   1048576
+group3/block2/conv3/gn/beta:0          [2048]                 2048
+group3/block2/conv3/gn/gamma:0         [2048]                 2048
+linear/W:0                             [2048, 1000]        2048000
+linear/b:0                             [1000]                 1000
+Total #vars=161, #params=25557032, size=97.49MB
+[1219 18:01:23 @base.py:209] Setup callbacks graph ...
+[1219 18:01:25 @input_source.py:219] Setting up the queue 'DataParallelInferenceRunner/QueueInput/input_queue' for CPU prefetching ...
+[1219 18:01:25 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower0' on device /gpu:0 ...
+[1219 18:01:26 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower1' on device /gpu:1 with variable scope 'tower1'...
+[1219 18:01:28 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower2' on device /gpu:2 with variable scope 'tower2'...
+[1219 18:01:29 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower3' on device /gpu:3 with variable scope 'tower3'...
+[1219 18:01:30 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower4' on device /gpu:4 with variable scope 'tower4'...
+[1219 18:01:31 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower5' on device /gpu:5 with variable scope 'tower5'...
+[1219 18:01:32 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower6' on device /gpu:6 with variable scope 'tower6'...
+[1219 18:01:33 @inference_runner.py:239] [InferenceRunner] Building tower 'InferenceTower7' on device /gpu:7 with variable scope 'tower7'...
+[1219 18:01:34 @summary.py:46] [MovingAverageSummary] 4 operations in collection 'MOVING_SUMMARY_OPS' will be run with session hooks.
+[1219 18:01:34 @summary.py:93] Summarizing collection 'summaries' of size 7.
+[1219 18:01:49 @base.py:230] Creating the session ...
+[1219 18:02:24 @base.py:236] Initializing the session ...
+[1219 18:02:24 @base.py:243] Graph Finalized.
+[1219 18:02:25 @concurrency.py:37] Starting EnqueueThread QueueInput/input_queue ...
+[1219 18:02:25 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 18:02:37 @param.py:158] [HyperParamSetter] At global_step=0, learning_rate is set to 0.100000
+[1219 18:02:38 @concurrency.py:37] Starting EnqueueThread DataParallelInferenceRunner/QueueInput/input_queue ...
+[1219 18:02:38 @inference_runner.py:101] [InferenceRunner] Will eval 1563 iterations
+[1219 18:02:39 @base.py:275] Start Epoch 1 ...
+[1219 18:02:39 @input_source.py:550] Pre-filling StagingArea ...
+[1219 18:02:40 @input_source.py:554] 1 element was put into StagingArea on each tower.
+[1219 18:22:11 @base.py:285] Epoch 1 (global_step 5004) finished, time:19 minutes 31 seconds.
+[1219 18:22:11 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 18:22:12 @saver.py:77] Model saved to train_log/ResNet50-GN/model-5004.
+[1219 18:22:12 @misc.py:109] Estimated Time Left: 1 day 9 hours 57 minutes 15 seconds
+[1219 18:22:59 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 50
+[1219 18:22:59 @monitor.py:459] QueueInput/queue_size: 49.461
+[1219 18:22:59 @monitor.py:459] l2_regularize_loss: 1.2797
+[1219 18:22:59 @monitor.py:459] learning_rate: 0.1
+[1219 18:22:59 @monitor.py:459] train-error-top1: 0.86814
+[1219 18:22:59 @monitor.py:459] train-error-top5: 0.71173
+[1219 18:22:59 @monitor.py:459] val-error-top1: 0.8546
+[1219 18:22:59 @monitor.py:459] val-error-top5: 0.67004
+[1219 18:22:59 @monitor.py:459] xentropy-loss: 4.7791
+[1219 18:22:59 @group.py:48] Callbacks took 48.057 sec in total. DataParallelInferenceRunner: 46.1 seconds
+[1219 18:22:59 @base.py:275] Start Epoch 2 ...
+[1219 18:38:29 @base.py:285] Epoch 2 (global_step 10008) finished, time:15 minutes 30 seconds.
+[1219 18:38:29 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 18:38:30 @saver.py:77] Model saved to train_log/ResNet50-GN/model-10008.
+[1219 18:38:30 @misc.py:109] Estimated Time Left: 1 day 6 hours 47 minutes 45 seconds
+[1219 18:39:07 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 29.469
+[1219 18:39:07 @monitor.py:459] QueueInput/queue_size: 48.011
+[1219 18:39:07 @monitor.py:459] l2_regularize_loss: 0.88098
+[1219 18:39:07 @monitor.py:459] learning_rate: 0.1
+[1219 18:39:07 @monitor.py:459] train-error-top1: 0.77193
+[1219 18:39:07 @monitor.py:459] train-error-top5: 0.54807
+[1219 18:39:07 @monitor.py:459] val-error-top1: 0.72072
+[1219 18:39:07 @monitor.py:459] val-error-top5: 0.4778
+[1219 18:39:07 @monitor.py:459] xentropy-loss: 3.9111
+[1219 18:39:07 @group.py:48] Callbacks took 37.733 sec in total. DataParallelInferenceRunner: 36.9 seconds
+[1219 18:39:07 @base.py:275] Start Epoch 3 ...
+[1219 18:54:38 @base.py:285] Epoch 3 (global_step 15012) finished, time:15 minutes 30 seconds.
+[1219 18:54:38 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 18:54:38 @saver.py:77] Model saved to train_log/ResNet50-GN/model-15012.
+[1219 18:54:38 @misc.py:109] Estimated Time Left: 1 day 5 hours 28 minutes 44 seconds
+[1219 18:55:14 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.935
+[1219 18:55:14 @monitor.py:459] QueueInput/queue_size: 49.552
+[1219 18:55:14 @monitor.py:459] l2_regularize_loss: 0.83173
+[1219 18:55:14 @monitor.py:459] learning_rate: 0.1
+[1219 18:55:14 @monitor.py:459] train-error-top1: 0.7008
+[1219 18:55:14 @monitor.py:459] train-error-top5: 0.45408
+[1219 18:55:14 @monitor.py:459] val-error-top1: 0.63336
+[1219 18:55:14 @monitor.py:459] val-error-top5: 0.3745
+[1219 18:55:14 @monitor.py:459] xentropy-loss: 3.3647
+[1219 18:55:14 @group.py:48] Callbacks took 36.523 sec in total. DataParallelInferenceRunner: 35.6 seconds
+[1219 18:55:14 @base.py:275] Start Epoch 4 ...
+[1219 19:10:51 @base.py:285] Epoch 4 (global_step 20016) finished, time:15 minutes 37 seconds.
+[1219 19:10:51 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 19:10:52 @saver.py:77] Model saved to train_log/ResNet50-GN/model-20016.
+[1219 19:10:52 @misc.py:109] Estimated Time Left: 1 day 4 hours 43 minutes 20 seconds
+[1219 19:11:28 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.442
+[1219 19:11:28 @monitor.py:459] QueueInput/queue_size: 49.912
+[1219 19:11:28 @monitor.py:459] l2_regularize_loss: 0.87067
+[1219 19:11:28 @monitor.py:459] learning_rate: 0.1
+[1219 19:11:28 @monitor.py:459] train-error-top1: 0.62967
+[1219 19:11:28 @monitor.py:459] train-error-top5: 0.37793
+[1219 19:11:28 @monitor.py:459] val-error-top1: 0.58458
+[1219 19:11:28 @monitor.py:459] val-error-top5: 0.31886
+[1219 19:11:28 @monitor.py:459] xentropy-loss: 2.8733
+[1219 19:11:28 @group.py:48] Callbacks took 36.817 sec in total. DataParallelInferenceRunner: 36 seconds
+[1219 19:11:28 @base.py:275] Start Epoch 5 ...
+[1219 19:27:04 @base.py:285] Epoch 5 (global_step 25020) finished, time:15 minutes 36 seconds.
+[1219 19:27:04 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 19:27:06 @saver.py:77] Model saved to train_log/ResNet50-GN/model-25020.
+[1219 19:27:06 @misc.py:109] Estimated Time Left: 1 day 4 hours 9 minutes 29 seconds
+[1219 19:27:41 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.526
+[1219 19:27:41 @monitor.py:459] QueueInput/queue_size: 49.532
+[1219 19:27:41 @monitor.py:459] l2_regularize_loss: 0.91692
+[1219 19:27:41 @monitor.py:459] learning_rate: 0.1
+[1219 19:27:41 @monitor.py:459] train-error-top1: 0.58465
+[1219 19:27:41 @monitor.py:459] train-error-top5: 0.32825
+[1219 19:27:41 @monitor.py:459] val-error-top1: 0.55642
+[1219 19:27:41 @monitor.py:459] val-error-top5: 0.29786
+[1219 19:27:41 @monitor.py:459] xentropy-loss: 2.6878
+[1219 19:27:41 @group.py:48] Callbacks took 37.119 sec in total. DataParallelInferenceRunner: 35.9 seconds
+[1219 19:27:41 @base.py:275] Start Epoch 6 ...
+[1219 19:43:12 @base.py:285] Epoch 6 (global_step 30024) finished, time:15 minutes 30 seconds.
+[1219 19:43:12 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 19:43:13 @saver.py:77] Model saved to train_log/ResNet50-GN/model-30024.
+[1219 19:43:13 @misc.py:109] Estimated Time Left: 1 day 2 hours 44 minutes
+[1219 19:43:49 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.46
+[1219 19:43:49 @monitor.py:459] QueueInput/queue_size: 48.997
+[1219 19:43:49 @monitor.py:459] l2_regularize_loss: 0.95708
+[1219 19:43:49 @monitor.py:459] learning_rate: 0.1
+[1219 19:43:49 @monitor.py:459] train-error-top1: 0.57648
+[1219 19:43:49 @monitor.py:459] train-error-top5: 0.33639
+[1219 19:43:49 @monitor.py:459] val-error-top1: 0.54158
+[1219 19:43:49 @monitor.py:459] val-error-top5: 0.27638
+[1219 19:43:49 @monitor.py:459] xentropy-loss: 2.7237
+[1219 19:43:49 @group.py:48] Callbacks took 36.890 sec in total. DataParallelInferenceRunner: 36 seconds
+[1219 19:43:49 @base.py:275] Start Epoch 7 ...
+[1219 19:59:21 @base.py:285] Epoch 7 (global_step 35028) finished, time:15 minutes 31 seconds.
+[1219 19:59:21 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 19:59:21 @saver.py:77] Model saved to train_log/ResNet50-GN/model-35028.
+[1219 19:59:21 @misc.py:109] Estimated Time Left: 1 day 2 hours 24 minutes 50 seconds
+[1219 19:59:56 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.562
+[1219 19:59:56 @monitor.py:459] QueueInput/queue_size: 48.651
+[1219 19:59:56 @monitor.py:459] l2_regularize_loss: 0.98861
+[1219 19:59:56 @monitor.py:459] learning_rate: 0.1
+[1219 19:59:56 @monitor.py:459] train-error-top1: 0.56901
+[1219 19:59:56 @monitor.py:459] train-error-top5: 0.32027
+[1219 19:59:56 @monitor.py:459] val-error-top1: 0.52586
+[1219 19:59:56 @monitor.py:459] val-error-top5: 0.26476
+[1219 19:59:56 @monitor.py:459] xentropy-loss: 2.564
+[1219 19:59:56 @group.py:48] Callbacks took 35.628 sec in total. DataParallelInferenceRunner: 34.9 seconds
+[1219 19:59:56 @base.py:275] Start Epoch 8 ...
+[1219 20:15:28 @base.py:285] Epoch 8 (global_step 40032) finished, time:15 minutes 32 seconds.
+[1219 20:15:28 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 20:15:29 @saver.py:77] Model saved to train_log/ResNet50-GN/model-40032.
+[1219 20:15:29 @misc.py:109] Estimated Time Left: 1 day 2 hours 8 minutes 25 seconds
+[1219 20:16:03 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.157
+[1219 20:16:03 @monitor.py:459] QueueInput/queue_size: 48.999
+[1219 20:16:03 @monitor.py:459] l2_regularize_loss: 1.0137
+[1219 20:16:03 @monitor.py:459] learning_rate: 0.1
+[1219 20:16:03 @monitor.py:459] train-error-top1: 0.59191
+[1219 20:16:03 @monitor.py:459] train-error-top5: 0.32787
+[1219 20:16:03 @monitor.py:459] val-error-top1: 0.50692
+[1219 20:16:03 @monitor.py:459] val-error-top5: 0.24922
+[1219 20:16:03 @monitor.py:459] xentropy-loss: 2.6461
+[1219 20:16:03 @group.py:48] Callbacks took 34.187 sec in total. DataParallelInferenceRunner: 33.3 seconds
+[1219 20:16:03 @base.py:275] Start Epoch 9 ...
+[1219 20:31:36 @base.py:285] Epoch 9 (global_step 45036) finished, time:15 minutes 33 seconds.
+[1219 20:31:36 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 20:31:37 @saver.py:77] Model saved to train_log/ResNet50-GN/model-45036.
+[1219 20:31:37 @misc.py:109] Estimated Time Left: 1 day 1 hour 50 minutes 21 seconds
+[1219 20:32:11 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.715
+[1219 20:32:11 @monitor.py:459] QueueInput/queue_size: 49.825
+[1219 20:32:11 @monitor.py:459] l2_regularize_loss: 1.0338
+[1219 20:32:11 @monitor.py:459] learning_rate: 0.1
+[1219 20:32:11 @monitor.py:459] train-error-top1: 0.56983
+[1219 20:32:11 @monitor.py:459] train-error-top5: 0.30268
+[1219 20:32:11 @monitor.py:459] val-error-top1: 0.50174
+[1219 20:32:11 @monitor.py:459] val-error-top5: 0.24244
+[1219 20:32:11 @monitor.py:459] xentropy-loss: 2.5496
+[1219 20:32:11 @group.py:48] Callbacks took 35.239 sec in total. DataParallelInferenceRunner: 34.3 seconds
+[1219 20:32:11 @base.py:275] Start Epoch 10 ...
+[1219 20:47:40 @base.py:285] Epoch 10 (global_step 50040) finished, time:15 minutes 28 seconds.
+[1219 20:47:40 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 20:47:41 @saver.py:77] Model saved to train_log/ResNet50-GN/model-50040.
+[1219 20:47:41 @misc.py:109] Estimated Time Left: 1 day 1 hour 31 minutes 3 seconds
+[1219 20:48:16 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.166
+[1219 20:48:16 @monitor.py:459] QueueInput/queue_size: 49.828
+[1219 20:48:16 @monitor.py:459] l2_regularize_loss: 1.0499
+[1219 20:48:16 @monitor.py:459] learning_rate: 0.1
+[1219 20:48:16 @monitor.py:459] train-error-top1: 0.5498
+[1219 20:48:16 @monitor.py:459] train-error-top5: 0.30908
+[1219 20:48:16 @monitor.py:459] val-error-top1: 0.4873
+[1219 20:48:16 @monitor.py:459] val-error-top5: 0.2309
+[1219 20:48:16 @monitor.py:459] xentropy-loss: 2.5269
+[1219 20:48:16 @group.py:48] Callbacks took 36.483 sec in total. DataParallelInferenceRunner: 35.5 seconds
+[1219 20:48:16 @base.py:275] Start Epoch 11 ...
+[1219 21:03:47 @base.py:285] Epoch 11 (global_step 55044) finished, time:15 minutes 31 seconds.
+[1219 21:03:47 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 21:03:48 @saver.py:77] Model saved to train_log/ResNet50-GN/model-55044.
+[1219 21:03:48 @misc.py:109] Estimated Time Left: 1 day 1 hour 14 minutes 59 seconds
+[1219 21:04:24 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.633
+[1219 21:04:24 @monitor.py:459] QueueInput/queue_size: 49.935
+[1219 21:04:24 @monitor.py:459] l2_regularize_loss: 1.0631
+[1219 21:04:24 @monitor.py:459] learning_rate: 0.1
+[1219 21:04:24 @monitor.py:459] train-error-top1: 0.53359
+[1219 21:04:24 @monitor.py:459] train-error-top5: 0.28452
+[1219 21:04:24 @monitor.py:459] val-error-top1: 0.48854
+[1219 21:04:24 @monitor.py:459] val-error-top5: 0.23106
+[1219 21:04:24 @monitor.py:459] xentropy-loss: 2.4048
+[1219 21:04:24 @group.py:48] Callbacks took 37.206 sec in total. DataParallelInferenceRunner: 36 seconds
+[1219 21:04:24 @base.py:275] Start Epoch 12 ...
+[1219 21:19:57 @base.py:285] Epoch 12 (global_step 60048) finished, time:15 minutes 32 seconds.
+[1219 21:19:57 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 21:19:58 @saver.py:77] Model saved to train_log/ResNet50-GN/model-60048.
+[1219 21:19:58 @misc.py:109] Estimated Time Left: 1 day 59 minutes 12 seconds
+[1219 21:20:34 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.712
+[1219 21:20:34 @monitor.py:459] QueueInput/queue_size: 50
+[1219 21:20:34 @monitor.py:459] l2_regularize_loss: 1.0736
+[1219 21:20:34 @monitor.py:459] learning_rate: 0.1
+[1219 21:20:34 @monitor.py:459] train-error-top1: 0.53609
+[1219 21:20:34 @monitor.py:459] train-error-top5: 0.28247
+[1219 21:20:34 @monitor.py:459] val-error-top1: 0.47426
+[1219 21:20:34 @monitor.py:459] val-error-top5: 0.2221
+[1219 21:20:34 @monitor.py:459] xentropy-loss: 2.375
+[1219 21:20:34 @group.py:48] Callbacks took 36.893 sec in total. DataParallelInferenceRunner: 36 seconds
+[1219 21:20:34 @base.py:275] Start Epoch 13 ...
+[1219 21:36:03 @base.py:285] Epoch 13 (global_step 65052) finished, time:15 minutes 29 seconds.
+[1219 21:36:03 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 21:36:04 @saver.py:77] Model saved to train_log/ResNet50-GN/model-65052.
+[1219 21:36:04 @misc.py:109] Estimated Time Left: 1 day 42 minutes 47 seconds
+[1219 21:36:41 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.932
+[1219 21:36:41 @monitor.py:459] QueueInput/queue_size: 48.953
+[1219 21:36:41 @monitor.py:459] l2_regularize_loss: 1.0819
+[1219 21:36:41 @monitor.py:459] learning_rate: 0.1
+[1219 21:36:41 @monitor.py:459] train-error-top1: 0.54885
+[1219 21:36:41 @monitor.py:459] train-error-top5: 0.30349
+[1219 21:36:41 @monitor.py:459] val-error-top1: 0.47376
+[1219 21:36:41 @monitor.py:459] val-error-top5: 0.2207
+[1219 21:36:41 @monitor.py:459] xentropy-loss: 2.4507
+[1219 21:36:41 @group.py:48] Callbacks took 38.089 sec in total. DataParallelInferenceRunner: 36.8 seconds
+[1219 21:36:41 @base.py:275] Start Epoch 14 ...
+[1219 21:52:13 @base.py:285] Epoch 14 (global_step 70056) finished, time:15 minutes 31 seconds.
+[1219 21:52:13 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 21:52:14 @saver.py:77] Model saved to train_log/ResNet50-GN/model-70056.
+[1219 21:52:14 @misc.py:109] Estimated Time Left: 1 day 27 minutes 10 seconds
+[1219 21:52:49 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.796
+[1219 21:52:49 @monitor.py:459] QueueInput/queue_size: 47.88
+[1219 21:52:49 @monitor.py:459] l2_regularize_loss: 1.091
+[1219 21:52:49 @monitor.py:459] learning_rate: 0.1
+[1219 21:52:49 @monitor.py:459] train-error-top1: 0.53949
+[1219 21:52:49 @monitor.py:459] train-error-top5: 0.31891
+[1219 21:52:49 @monitor.py:459] val-error-top1: 0.45954
+[1219 21:52:49 @monitor.py:459] val-error-top5: 0.20906
+[1219 21:52:49 @monitor.py:459] xentropy-loss: 2.4856
+[1219 21:52:49 @group.py:48] Callbacks took 36.288 sec in total. DataParallelInferenceRunner: 35.5 seconds
+[1219 21:52:49 @base.py:275] Start Epoch 15 ...
+[1219 22:08:18 @base.py:285] Epoch 15 (global_step 75060) finished, time:15 minutes 28 seconds.
+[1219 22:08:18 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 22:08:19 @saver.py:77] Model saved to train_log/ResNet50-GN/model-75060.
+[1219 22:08:19 @misc.py:109] Estimated Time Left: 1 day 11 minutes 37 seconds
+[1219 22:08:55 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.915
+[1219 22:08:55 @monitor.py:459] QueueInput/queue_size: 47.703
+[1219 22:08:55 @monitor.py:459] l2_regularize_loss: 1.0995
+[1219 22:08:55 @monitor.py:459] learning_rate: 0.1
+[1219 22:08:55 @monitor.py:459] train-error-top1: 0.501
+[1219 22:08:55 @monitor.py:459] train-error-top5: 0.275
+[1219 22:08:55 @monitor.py:459] val-error-top1: 0.46338
+[1219 22:08:55 @monitor.py:459] val-error-top5: 0.21188
+[1219 22:08:55 @monitor.py:459] xentropy-loss: 2.2878
+[1219 22:08:55 @group.py:48] Callbacks took 36.888 sec in total. DataParallelInferenceRunner: 35.8 seconds
+[1219 22:08:55 @base.py:275] Start Epoch 16 ...
+[1219 22:24:28 @base.py:285] Epoch 16 (global_step 80064) finished, time:15 minutes 33 seconds.
+[1219 22:24:28 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 22:24:29 @saver.py:77] Model saved to train_log/ResNet50-GN/model-80064.
+[1219 22:24:29 @misc.py:109] Estimated Time Left: 23 hours 56 minutes 9 seconds
+[1219 22:25:05 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.124
+[1219 22:25:05 @monitor.py:459] QueueInput/queue_size: 49.965
+[1219 22:25:05 @monitor.py:459] l2_regularize_loss: 1.1048
+[1219 22:25:05 @monitor.py:459] learning_rate: 0.1
+[1219 22:25:05 @monitor.py:459] train-error-top1: 0.557
+[1219 22:25:05 @monitor.py:459] train-error-top5: 0.29174
+[1219 22:25:05 @monitor.py:459] val-error-top1: 0.4623
+[1219 22:25:05 @monitor.py:459] val-error-top5: 0.21038
+[1219 22:25:05 @monitor.py:459] xentropy-loss: 2.4528
+[1219 22:25:05 @group.py:48] Callbacks took 36.312 sec in total. DataParallelInferenceRunner: 35.6 seconds
+[1219 22:25:05 @base.py:275] Start Epoch 17 ...
+[1219 22:40:38 @base.py:285] Epoch 17 (global_step 85068) finished, time:15 minutes 33 seconds.
+[1219 22:40:38 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 22:40:39 @saver.py:77] Model saved to train_log/ResNet50-GN/model-85068.
+[1219 22:40:39 @misc.py:109] Estimated Time Left: 23 hours 40 minutes 17 seconds
+[1219 22:41:16 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.803
+[1219 22:41:16 @monitor.py:459] QueueInput/queue_size: 47.944
+[1219 22:41:16 @monitor.py:459] l2_regularize_loss: 1.1098
+[1219 22:41:16 @monitor.py:459] learning_rate: 0.1
+[1219 22:41:16 @monitor.py:459] train-error-top1: 0.5087
+[1219 22:41:16 @monitor.py:459] train-error-top5: 0.28771
+[1219 22:41:16 @monitor.py:459] val-error-top1: 0.45336
+[1219 22:41:16 @monitor.py:459] val-error-top5: 0.2029
+[1219 22:41:16 @monitor.py:459] xentropy-loss: 2.3087
+[1219 22:41:16 @group.py:48] Callbacks took 37.270 sec in total. DataParallelInferenceRunner: 36.1 seconds
+[1219 22:41:16 @base.py:275] Start Epoch 18 ...
+[1219 22:56:48 @base.py:285] Epoch 18 (global_step 90072) finished, time:15 minutes 32 seconds.
+[1219 22:56:48 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 22:56:49 @saver.py:77] Model saved to train_log/ResNet50-GN/model-90072.
+[1219 22:56:49 @misc.py:109] Estimated Time Left: 23 hours 24 minutes 48 seconds
+[1219 22:57:25 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.492
+[1219 22:57:25 @monitor.py:459] QueueInput/queue_size: 49.494
+[1219 22:57:25 @monitor.py:459] l2_regularize_loss: 1.1133
+[1219 22:57:25 @monitor.py:459] learning_rate: 0.1
+[1219 22:57:25 @monitor.py:459] train-error-top1: 0.5159
+[1219 22:57:25 @monitor.py:459] train-error-top5: 0.26345
+[1219 22:57:25 @monitor.py:459] val-error-top1: 0.45738
+[1219 22:57:25 @monitor.py:459] val-error-top5: 0.20724
+[1219 22:57:25 @monitor.py:459] xentropy-loss: 2.3015
+[1219 22:57:25 @group.py:48] Callbacks took 37.318 sec in total. DataParallelInferenceRunner: 36.5 seconds
+[1219 22:57:25 @base.py:275] Start Epoch 19 ...
+[1219 23:12:55 @base.py:285] Epoch 19 (global_step 95076) finished, time:15 minutes 30 seconds.
+[1219 23:12:55 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 23:12:56 @saver.py:77] Model saved to train_log/ResNet50-GN/model-95076.
+[1219 23:12:56 @misc.py:109] Estimated Time Left: 23 hours 8 minutes 10 seconds
+[1219 23:13:34 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.909
+[1219 23:13:34 @monitor.py:459] QueueInput/queue_size: 49.923
+[1219 23:13:34 @monitor.py:459] l2_regularize_loss: 1.1188
+[1219 23:13:34 @monitor.py:459] learning_rate: 0.1
+[1219 23:13:34 @monitor.py:459] train-error-top1: 0.52166
+[1219 23:13:34 @monitor.py:459] train-error-top5: 0.28931
+[1219 23:13:34 @monitor.py:459] val-error-top1: 0.45408
+[1219 23:13:34 @monitor.py:459] val-error-top5: 0.20412
+[1219 23:13:34 @monitor.py:459] xentropy-loss: 2.4203
+[1219 23:13:34 @group.py:48] Callbacks took 38.218 sec in total. DataParallelInferenceRunner: 37.1 seconds
+[1219 23:13:34 @base.py:275] Start Epoch 20 ...
+[1219 23:29:09 @base.py:285] Epoch 20 (global_step 100080) finished, time:15 minutes 35 seconds.
+[1219 23:29:09 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 23:29:11 @saver.py:77] Model saved to train_log/ResNet50-GN/model-100080.
+[1219 23:29:11 @misc.py:109] Estimated Time Left: 22 hours 54 minutes 37 seconds
+[1219 23:29:47 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.083
+[1219 23:29:47 @monitor.py:459] QueueInput/queue_size: 49.781
+[1219 23:29:47 @monitor.py:459] l2_regularize_loss: 1.1206
+[1219 23:29:47 @monitor.py:459] learning_rate: 0.1
+[1219 23:29:47 @monitor.py:459] train-error-top1: 0.52061
+[1219 23:29:47 @monitor.py:459] train-error-top5: 0.27471
+[1219 23:29:47 @monitor.py:459] val-error-top1: 0.45924
+[1219 23:29:47 @monitor.py:459] val-error-top5: 0.20794
+[1219 23:29:47 @monitor.py:459] xentropy-loss: 2.3392
+[1219 23:29:47 @group.py:48] Callbacks took 37.090 sec in total. DataParallelInferenceRunner: 35.6 seconds
+[1219 23:29:47 @base.py:275] Start Epoch 21 ...
+[1219 23:45:21 @base.py:285] Epoch 21 (global_step 105084) finished, time:15 minutes 34 seconds.
+[1219 23:45:21 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1219 23:45:22 @saver.py:77] Model saved to train_log/ResNet50-GN/model-105084.
+[1219 23:45:22 @misc.py:109] Estimated Time Left: 22 hours 38 minutes 42 seconds
+[1219 23:45:59 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.62
+[1219 23:45:59 @monitor.py:459] QueueInput/queue_size: 49.845
+[1219 23:45:59 @monitor.py:459] l2_regularize_loss: 1.1243
+[1219 23:45:59 @monitor.py:459] learning_rate: 0.1
+[1219 23:45:59 @monitor.py:459] train-error-top1: 0.51423
+[1219 23:45:59 @monitor.py:459] train-error-top5: 0.28954
+[1219 23:45:59 @monitor.py:459] val-error-top1: 0.44494
+[1219 23:45:59 @monitor.py:459] val-error-top5: 0.1969
+[1219 23:45:59 @monitor.py:459] xentropy-loss: 2.3954
+[1219 23:45:59 @group.py:48] Callbacks took 37.889 sec in total. DataParallelInferenceRunner: 36.9 seconds
+[1219 23:45:59 @base.py:275] Start Epoch 22 ...
+[1220 00:01:32 @base.py:285] Epoch 22 (global_step 110088) finished, time:15 minutes 33 seconds.
+[1220 00:01:32 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 00:01:33 @saver.py:77] Model saved to train_log/ResNet50-GN/model-110088.
+[1220 00:01:33 @misc.py:109] Estimated Time Left: 22 hours 22 minutes 54 seconds
+[1220 00:02:10 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.798
+[1220 00:02:10 @monitor.py:459] QueueInput/queue_size: 49.574
+[1220 00:02:10 @monitor.py:459] l2_regularize_loss: 1.1261
+[1220 00:02:10 @monitor.py:459] learning_rate: 0.1
+[1220 00:02:10 @monitor.py:459] train-error-top1: 0.53043
+[1220 00:02:10 @monitor.py:459] train-error-top5: 0.27477
+[1220 00:02:10 @monitor.py:459] val-error-top1: 0.44198
+[1220 00:02:10 @monitor.py:459] val-error-top5: 0.19586
+[1220 00:02:10 @monitor.py:459] xentropy-loss: 2.3135
+[1220 00:02:10 @group.py:48] Callbacks took 38.307 sec in total. DataParallelInferenceRunner: 37.1 seconds
+[1220 00:02:10 @base.py:275] Start Epoch 23 ...
+[1220 00:17:47 @base.py:285] Epoch 23 (global_step 115092) finished, time:15 minutes 36 seconds.
+[1220 00:17:47 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 00:17:48 @saver.py:77] Model saved to train_log/ResNet50-GN/model-115092.
+[1220 00:17:48 @misc.py:109] Estimated Time Left: 22 hours 8 minutes 22 seconds
+[1220 00:18:25 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.479
+[1220 00:18:25 @monitor.py:459] QueueInput/queue_size: 48.993
+[1220 00:18:25 @monitor.py:459] l2_regularize_loss: 1.1295
+[1220 00:18:25 @monitor.py:459] learning_rate: 0.1
+[1220 00:18:25 @monitor.py:459] train-error-top1: 0.49912
+[1220 00:18:25 @monitor.py:459] train-error-top5: 0.24787
+[1220 00:18:25 @monitor.py:459] val-error-top1: 0.44954
+[1220 00:18:25 @monitor.py:459] val-error-top5: 0.20046
+[1220 00:18:25 @monitor.py:459] xentropy-loss: 2.2321
+[1220 00:18:25 @group.py:48] Callbacks took 37.587 sec in total. DataParallelInferenceRunner: 36.4 seconds
+[1220 00:18:25 @base.py:275] Start Epoch 24 ...
+[1220 00:33:55 @base.py:285] Epoch 24 (global_step 120096) finished, time:15 minutes 29 seconds.
+[1220 00:33:55 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 00:33:56 @saver.py:77] Model saved to train_log/ResNet50-GN/model-120096.
+[1220 00:33:56 @misc.py:109] Estimated Time Left: 21 hours 52 minutes 4 seconds
+[1220 00:34:31 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.04
+[1220 00:34:31 @monitor.py:459] QueueInput/queue_size: 49.9
+[1220 00:34:31 @monitor.py:459] l2_regularize_loss: 1.1331
+[1220 00:34:31 @monitor.py:459] learning_rate: 0.1
+[1220 00:34:31 @monitor.py:459] train-error-top1: 0.5335
+[1220 00:34:31 @monitor.py:459] train-error-top5: 0.2757
+[1220 00:34:31 @monitor.py:459] val-error-top1: 0.44488
+[1220 00:34:31 @monitor.py:459] val-error-top5: 0.19456
+[1220 00:34:31 @monitor.py:459] xentropy-loss: 2.3378
+[1220 00:34:31 @group.py:48] Callbacks took 36.842 sec in total. DataParallelInferenceRunner: 35.5 seconds
+[1220 00:34:31 @base.py:275] Start Epoch 25 ...
+[1220 00:50:00 @base.py:285] Epoch 25 (global_step 125100) finished, time:15 minutes 28 seconds.
+[1220 00:50:00 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 00:50:01 @saver.py:77] Model saved to train_log/ResNet50-GN/model-125100.
+[1220 00:50:01 @misc.py:109] Estimated Time Left: 21 hours 33 minutes 18 seconds
+[1220 00:50:37 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.926
+[1220 00:50:37 @monitor.py:459] QueueInput/queue_size: 49.998
+[1220 00:50:37 @monitor.py:459] l2_regularize_loss: 1.134
+[1220 00:50:37 @monitor.py:459] learning_rate: 0.1
+[1220 00:50:37 @monitor.py:459] train-error-top1: 0.48561
+[1220 00:50:37 @monitor.py:459] train-error-top5: 0.24956
+[1220 00:50:37 @monitor.py:459] val-error-top1: 0.4447
+[1220 00:50:37 @monitor.py:459] val-error-top5: 0.19728
+[1220 00:50:37 @monitor.py:459] xentropy-loss: 2.1617
+[1220 00:50:37 @group.py:48] Callbacks took 36.991 sec in total. DataParallelInferenceRunner: 36.1 seconds
+[1220 00:50:37 @base.py:275] Start Epoch 26 ...
+[1220 01:06:08 @base.py:285] Epoch 26 (global_step 130104) finished, time:15 minutes 30 seconds.
+[1220 01:06:08 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 01:06:09 @saver.py:77] Model saved to train_log/ResNet50-GN/model-130104.
+[1220 01:06:09 @misc.py:109] Estimated Time Left: 21 hours 16 minutes 25 seconds
+[1220 01:06:43 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.621
+[1220 01:06:43 @monitor.py:459] QueueInput/queue_size: 48.992
+[1220 01:06:43 @monitor.py:459] l2_regularize_loss: 1.1352
+[1220 01:06:43 @monitor.py:459] learning_rate: 0.1
+[1220 01:06:43 @monitor.py:459] train-error-top1: 0.5127
+[1220 01:06:43 @monitor.py:459] train-error-top5: 0.24991
+[1220 01:06:43 @monitor.py:459] val-error-top1: 0.44478
+[1220 01:06:43 @monitor.py:459] val-error-top5: 0.20092
+[1220 01:06:43 @monitor.py:459] xentropy-loss: 2.2358
+[1220 01:06:43 @group.py:48] Callbacks took 35.102 sec in total. DataParallelInferenceRunner: 33.8 seconds
+[1220 01:06:43 @base.py:275] Start Epoch 27 ...
+[1220 01:22:15 @base.py:285] Epoch 27 (global_step 135108) finished, time:15 minutes 32 seconds.
+[1220 01:22:15 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 01:22:16 @saver.py:77] Model saved to train_log/ResNet50-GN/model-135108.
+[1220 01:22:16 @misc.py:109] Estimated Time Left: 20 hours 59 minutes 6 seconds
+[1220 01:22:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.094
+[1220 01:22:52 @monitor.py:459] QueueInput/queue_size: 49.572
+[1220 01:22:52 @monitor.py:459] l2_regularize_loss: 1.1381
+[1220 01:22:52 @monitor.py:459] learning_rate: 0.1
+[1220 01:22:52 @monitor.py:459] train-error-top1: 0.5043
+[1220 01:22:52 @monitor.py:459] train-error-top5: 0.25436
+[1220 01:22:52 @monitor.py:459] val-error-top1: 0.44062
+[1220 01:22:52 @monitor.py:459] val-error-top5: 0.19466
+[1220 01:22:52 @monitor.py:459] xentropy-loss: 2.2019
+[1220 01:22:52 @group.py:48] Callbacks took 37.332 sec in total. DataParallelInferenceRunner: 36.4 seconds
+[1220 01:22:52 @base.py:275] Start Epoch 28 ...
+[1220 01:38:24 @base.py:285] Epoch 28 (global_step 140112) finished, time:15 minutes 31 seconds.
+[1220 01:38:24 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 01:38:25 @saver.py:77] Model saved to train_log/ResNet50-GN/model-140112.
+[1220 01:38:25 @misc.py:109] Estimated Time Left: 20 hours 41 minutes 19 seconds
+[1220 01:39:00 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.769
+[1220 01:39:00 @monitor.py:459] QueueInput/queue_size: 49.486
+[1220 01:39:00 @monitor.py:459] l2_regularize_loss: 1.1409
+[1220 01:39:00 @monitor.py:459] learning_rate: 0.1
+[1220 01:39:00 @monitor.py:459] train-error-top1: 0.50842
+[1220 01:39:00 @monitor.py:459] train-error-top5: 0.24898
+[1220 01:39:00 @monitor.py:459] val-error-top1: 0.44114
+[1220 01:39:00 @monitor.py:459] val-error-top5: 0.19278
+[1220 01:39:00 @monitor.py:459] xentropy-loss: 2.2024
+[1220 01:39:00 @group.py:48] Callbacks took 35.809 sec in total. DataParallelInferenceRunner: 34.8 seconds
+[1220 01:39:00 @base.py:275] Start Epoch 29 ...
+[1220 01:54:30 @base.py:285] Epoch 29 (global_step 145116) finished, time:15 minutes 30 seconds.
+[1220 01:54:30 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 01:54:31 @saver.py:77] Model saved to train_log/ResNet50-GN/model-145116.
+[1220 01:54:31 @misc.py:109] Estimated Time Left: 20 hours 24 minutes 57 seconds
+[1220 01:55:07 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.611
+[1220 01:55:07 @monitor.py:459] QueueInput/queue_size: 49.681
+[1220 01:55:07 @monitor.py:459] l2_regularize_loss: 1.1417
+[1220 01:55:07 @monitor.py:459] learning_rate: 0.1
+[1220 01:55:07 @monitor.py:459] train-error-top1: 0.47591
+[1220 01:55:07 @monitor.py:459] train-error-top5: 0.23456
+[1220 01:55:07 @monitor.py:459] val-error-top1: 0.4435
+[1220 01:55:07 @monitor.py:459] val-error-top5: 0.19094
+[1220 01:55:07 @monitor.py:459] xentropy-loss: 2.1657
+[1220 01:55:07 @group.py:48] Callbacks took 36.137 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 01:55:07 @base.py:275] Start Epoch 30 ...
+[1220 02:10:38 @base.py:285] Epoch 30 (global_step 150120) finished, time:15 minutes 31 seconds.
+[1220 02:10:38 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 02:10:39 @saver.py:77] Model saved to train_log/ResNet50-GN/model-150120.
+[1220 02:10:39 @misc.py:109] Estimated Time Left: 20 hours 9 minutes 35 seconds
+[1220 02:10:39 @param.py:161] [HyperParamSetter] At global_step=150120, learning_rate changes from 0.100000 to 0.010000
+[1220 02:11:16 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.155
+[1220 02:11:16 @monitor.py:459] QueueInput/queue_size: 49.062
+[1220 02:11:16 @monitor.py:459] l2_regularize_loss: 1.1435
+[1220 02:11:16 @monitor.py:459] learning_rate: 0.1
+[1220 02:11:16 @monitor.py:459] train-error-top1: 0.48194
+[1220 02:11:16 @monitor.py:459] train-error-top5: 0.2432
+[1220 02:11:16 @monitor.py:459] val-error-top1: 0.44082
+[1220 02:11:16 @monitor.py:459] val-error-top5: 0.19136
+[1220 02:11:16 @monitor.py:459] xentropy-loss: 2.1438
+[1220 02:11:16 @group.py:48] Callbacks took 37.686 sec in total. DataParallelInferenceRunner: 36.6 seconds
+[1220 02:11:16 @base.py:275] Start Epoch 31 ...
+[1220 02:26:48 @base.py:285] Epoch 31 (global_step 155124) finished, time:15 minutes 32 seconds.
+[1220 02:26:48 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 02:26:49 @saver.py:77] Model saved to train_log/ResNet50-GN/model-155124.
+[1220 02:26:49 @misc.py:109] Estimated Time Left: 19 hours 53 minutes 56 seconds
+[1220 02:27:24 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.64
+[1220 02:27:24 @monitor.py:459] QueueInput/queue_size: 47.092
+[1220 02:27:24 @monitor.py:459] l2_regularize_loss: 1.0546
+[1220 02:27:24 @monitor.py:459] learning_rate: 0.01
+[1220 02:27:24 @monitor.py:459] train-error-top1: 0.35191
+[1220 02:27:24 @monitor.py:459] train-error-top5: 0.15394
+[1220 02:27:24 @monitor.py:459] val-error-top1: 0.3235
+[1220 02:27:24 @monitor.py:459] val-error-top5: 0.1176
+[1220 02:27:24 @monitor.py:459] xentropy-loss: 1.5135
+[1220 02:27:24 @group.py:48] Callbacks took 35.643 sec in total. DataParallelInferenceRunner: 34.7 seconds
+[1220 02:27:24 @base.py:275] Start Epoch 32 ...
+[1220 02:42:55 @base.py:285] Epoch 32 (global_step 160128) finished, time:15 minutes 31 seconds.
+[1220 02:42:55 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 02:42:56 @saver.py:77] Model saved to train_log/ResNet50-GN/model-160128.
+[1220 02:42:56 @misc.py:109] Estimated Time Left: 19 hours 37 minutes 44 seconds
+[1220 02:43:31 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.869
+[1220 02:43:31 @monitor.py:459] QueueInput/queue_size: 47.987
+[1220 02:43:31 @monitor.py:459] l2_regularize_loss: 0.97688
+[1220 02:43:31 @monitor.py:459] learning_rate: 0.01
+[1220 02:43:31 @monitor.py:459] train-error-top1: 0.35762
+[1220 02:43:31 @monitor.py:459] train-error-top5: 0.14639
+[1220 02:43:31 @monitor.py:459] val-error-top1: 0.3135
+[1220 02:43:31 @monitor.py:459] val-error-top5: 0.11126
+[1220 02:43:31 @monitor.py:459] xentropy-loss: 1.4937
+[1220 02:43:31 @group.py:48] Callbacks took 36.246 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 02:43:31 @base.py:275] Start Epoch 33 ...
+[1220 02:59:01 @base.py:285] Epoch 33 (global_step 165132) finished, time:15 minutes 29 seconds.
+[1220 02:59:01 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 02:59:02 @saver.py:77] Model saved to train_log/ResNet50-GN/model-165132.
+[1220 02:59:02 @misc.py:109] Estimated Time Left: 19 hours 20 minutes 51 seconds
+[1220 02:59:37 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.269
+[1220 02:59:37 @monitor.py:459] QueueInput/queue_size: 49.925
+[1220 02:59:37 @monitor.py:459] l2_regularize_loss: 0.90961
+[1220 02:59:37 @monitor.py:459] learning_rate: 0.01
+[1220 02:59:37 @monitor.py:459] train-error-top1: 0.35251
+[1220 02:59:37 @monitor.py:459] train-error-top5: 0.15808
+[1220 02:59:37 @monitor.py:459] val-error-top1: 0.31148
+[1220 02:59:37 @monitor.py:459] val-error-top5: 0.10948
+[1220 02:59:37 @monitor.py:459] xentropy-loss: 1.496
+[1220 02:59:37 @group.py:48] Callbacks took 36.017 sec in total. DataParallelInferenceRunner: 34.8 seconds
+[1220 02:59:37 @base.py:275] Start Epoch 34 ...
+[1220 03:15:06 @base.py:285] Epoch 34 (global_step 170136) finished, time:15 minutes 29 seconds.
+[1220 03:15:06 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 03:15:08 @saver.py:77] Model saved to train_log/ResNet50-GN/model-170136.
+[1220 03:15:08 @misc.py:109] Estimated Time Left: 19 hours 4 minutes 35 seconds
+[1220 03:15:43 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.599
+[1220 03:15:43 @monitor.py:459] QueueInput/queue_size: 48.927
+[1220 03:15:43 @monitor.py:459] l2_regularize_loss: 0.8516
+[1220 03:15:43 @monitor.py:459] learning_rate: 0.01
+[1220 03:15:43 @monitor.py:459] train-error-top1: 0.33564
+[1220 03:15:43 @monitor.py:459] train-error-top5: 0.14487
+[1220 03:15:43 @monitor.py:459] val-error-top1: 0.30738
+[1220 03:15:43 @monitor.py:459] val-error-top5: 0.10738
+[1220 03:15:43 @monitor.py:459] xentropy-loss: 1.4514
+[1220 03:15:43 @group.py:48] Callbacks took 36.312 sec in total. DataParallelInferenceRunner: 35.2 seconds
+[1220 03:15:43 @base.py:275] Start Epoch 35 ...
+[1220 03:31:13 @base.py:285] Epoch 35 (global_step 175140) finished, time:15 minutes 30 seconds.
+[1220 03:31:13 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 03:31:15 @saver.py:77] Model saved to train_log/ResNet50-GN/model-175140.
+[1220 03:31:15 @misc.py:109] Estimated Time Left: 18 hours 48 minutes 19 seconds
+[1220 03:31:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.888
+[1220 03:31:52 @monitor.py:459] QueueInput/queue_size: 48.892
+[1220 03:31:52 @monitor.py:459] l2_regularize_loss: 0.8017
+[1220 03:31:52 @monitor.py:459] learning_rate: 0.01
+[1220 03:31:52 @monitor.py:459] train-error-top1: 0.32469
+[1220 03:31:52 @monitor.py:459] train-error-top5: 0.13863
+[1220 03:31:52 @monitor.py:459] val-error-top1: 0.30706
+[1220 03:31:52 @monitor.py:459] val-error-top5: 0.10536
+[1220 03:31:52 @monitor.py:459] xentropy-loss: 1.3783
+[1220 03:31:52 @group.py:48] Callbacks took 38.211 sec in total. DataParallelInferenceRunner: 36.8 seconds
+[1220 03:31:52 @base.py:275] Start Epoch 36 ...
+[1220 03:47:21 @base.py:285] Epoch 36 (global_step 180144) finished, time:15 minutes 29 seconds.
+[1220 03:47:21 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 03:47:22 @saver.py:77] Model saved to train_log/ResNet50-GN/model-180144.
+[1220 03:47:22 @misc.py:109] Estimated Time Left: 18 hours 31 minutes 34 seconds
+[1220 03:47:58 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.501
+[1220 03:47:58 @monitor.py:459] QueueInput/queue_size: 49.811
+[1220 03:47:58 @monitor.py:459] l2_regularize_loss: 0.75919
+[1220 03:47:58 @monitor.py:459] learning_rate: 0.01
+[1220 03:47:58 @monitor.py:459] train-error-top1: 0.32261
+[1220 03:47:58 @monitor.py:459] train-error-top5: 0.12497
+[1220 03:47:58 @monitor.py:459] val-error-top1: 0.3048
+[1220 03:47:58 @monitor.py:459] val-error-top5: 0.10556
+[1220 03:47:58 @monitor.py:459] xentropy-loss: 1.3603
+[1220 03:47:58 @group.py:48] Callbacks took 37.048 sec in total. DataParallelInferenceRunner: 36.2 seconds
+[1220 03:47:58 @base.py:275] Start Epoch 37 ...
+[1220 04:03:29 @base.py:285] Epoch 37 (global_step 185148) finished, time:15 minutes 30 seconds.
+[1220 04:03:29 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 04:03:31 @saver.py:77] Model saved to train_log/ResNet50-GN/model-185148.
+[1220 04:03:31 @misc.py:109] Estimated Time Left: 18 hours 15 minutes 48 seconds
+[1220 04:04:08 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.773
+[1220 04:04:08 @monitor.py:459] QueueInput/queue_size: 48.998
+[1220 04:04:08 @monitor.py:459] l2_regularize_loss: 0.72315
+[1220 04:04:08 @monitor.py:459] learning_rate: 0.01
+[1220 04:04:08 @monitor.py:459] train-error-top1: 0.34545
+[1220 04:04:08 @monitor.py:459] train-error-top5: 0.13876
+[1220 04:04:08 @monitor.py:459] val-error-top1: 0.30378
+[1220 04:04:08 @monitor.py:459] val-error-top5: 0.10418
+[1220 04:04:08 @monitor.py:459] xentropy-loss: 1.4463
+[1220 04:04:08 @group.py:48] Callbacks took 38.396 sec in total. DataParallelInferenceRunner: 37.2 seconds
+[1220 04:04:08 @base.py:275] Start Epoch 38 ...
+[1220 04:19:39 @base.py:285] Epoch 38 (global_step 190152) finished, time:15 minutes 31 seconds.
+[1220 04:19:39 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 04:19:40 @saver.py:77] Model saved to train_log/ResNet50-GN/model-190152.
+[1220 04:19:40 @misc.py:109] Estimated Time Left: 18 hours 37 seconds
+[1220 04:20:18 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.056
+[1220 04:20:18 @monitor.py:459] QueueInput/queue_size: 49.971
+[1220 04:20:18 @monitor.py:459] l2_regularize_loss: 0.69282
+[1220 04:20:18 @monitor.py:459] learning_rate: 0.01
+[1220 04:20:18 @monitor.py:459] train-error-top1: 0.34373
+[1220 04:20:18 @monitor.py:459] train-error-top5: 0.14335
+[1220 04:20:18 @monitor.py:459] val-error-top1: 0.30328
+[1220 04:20:18 @monitor.py:459] val-error-top5: 0.10402
+[1220 04:20:18 @monitor.py:459] xentropy-loss: 1.4136
+[1220 04:20:18 @group.py:48] Callbacks took 38.732 sec in total. DataParallelInferenceRunner: 37.6 seconds
+[1220 04:20:18 @base.py:275] Start Epoch 39 ...
+[1220 04:35:51 @base.py:285] Epoch 39 (global_step 195156) finished, time:15 minutes 33 seconds.
+[1220 04:35:51 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 04:35:53 @saver.py:77] Model saved to train_log/ResNet50-GN/model-195156.
+[1220 04:35:53 @misc.py:109] Estimated Time Left: 17 hours 45 minutes 55 seconds
+[1220 04:36:29 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.623
+[1220 04:36:29 @monitor.py:459] QueueInput/queue_size: 49.874
+[1220 04:36:29 @monitor.py:459] l2_regularize_loss: 0.66745
+[1220 04:36:29 @monitor.py:459] learning_rate: 0.01
+[1220 04:36:29 @monitor.py:459] train-error-top1: 0.34156
+[1220 04:36:29 @monitor.py:459] train-error-top5: 0.14643
+[1220 04:36:29 @monitor.py:459] val-error-top1: 0.30232
+[1220 04:36:29 @monitor.py:459] val-error-top5: 0.10408
+[1220 04:36:29 @monitor.py:459] xentropy-loss: 1.4054
+[1220 04:36:29 @group.py:48] Callbacks took 37.633 sec in total. DataParallelInferenceRunner: 36.2 seconds
+[1220 04:36:29 @base.py:275] Start Epoch 40 ...
+[1220 04:52:01 @base.py:285] Epoch 40 (global_step 200160) finished, time:15 minutes 31 seconds.
+[1220 04:52:01 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 04:52:02 @saver.py:77] Model saved to train_log/ResNet50-GN/model-200160.
+[1220 04:52:02 @misc.py:109] Estimated Time Left: 17 hours 30 minutes 6 seconds
+[1220 04:52:38 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.148
+[1220 04:52:38 @monitor.py:459] QueueInput/queue_size: 49.234
+[1220 04:52:38 @monitor.py:459] l2_regularize_loss: 0.64647
+[1220 04:52:38 @monitor.py:459] learning_rate: 0.01
+[1220 04:52:38 @monitor.py:459] train-error-top1: 0.34011
+[1220 04:52:38 @monitor.py:459] train-error-top5: 0.15261
+[1220 04:52:38 @monitor.py:459] val-error-top1: 0.30328
+[1220 04:52:38 @monitor.py:459] val-error-top5: 0.10494
+[1220 04:52:38 @monitor.py:459] xentropy-loss: 1.4337
+[1220 04:52:38 @group.py:48] Callbacks took 37.267 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 04:52:38 @base.py:275] Start Epoch 41 ...
+[1220 05:08:09 @base.py:285] Epoch 41 (global_step 205164) finished, time:15 minutes 30 seconds.
+[1220 05:08:09 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 05:08:10 @saver.py:77] Model saved to train_log/ResNet50-GN/model-205164.
+[1220 05:08:10 @misc.py:109] Estimated Time Left: 17 hours 14 minutes 14 seconds
+[1220 05:08:48 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.986
+[1220 05:08:48 @monitor.py:459] QueueInput/queue_size: 48.961
+[1220 05:08:48 @monitor.py:459] l2_regularize_loss: 0.62931
+[1220 05:08:48 @monitor.py:459] learning_rate: 0.01
+[1220 05:08:48 @monitor.py:459] train-error-top1: 0.31579
+[1220 05:08:48 @monitor.py:459] train-error-top5: 0.12939
+[1220 05:08:48 @monitor.py:459] val-error-top1: 0.30522
+[1220 05:08:48 @monitor.py:459] val-error-top5: 0.10474
+[1220 05:08:48 @monitor.py:459] xentropy-loss: 1.331
+[1220 05:08:48 @group.py:48] Callbacks took 38.856 sec in total. DataParallelInferenceRunner: 37.4 seconds
+[1220 05:08:48 @base.py:275] Start Epoch 42 ...
+[1220 05:24:16 @base.py:285] Epoch 42 (global_step 210168) finished, time:15 minutes 28 seconds.
+[1220 05:24:16 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 05:24:17 @saver.py:77] Model saved to train_log/ResNet50-GN/model-210168.
+[1220 05:24:17 @misc.py:109] Estimated Time Left: 16 hours 57 minutes 46 seconds
+[1220 05:24:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.873
+[1220 05:24:52 @monitor.py:459] QueueInput/queue_size: 49.419
+[1220 05:24:52 @monitor.py:459] l2_regularize_loss: 0.61535
+[1220 05:24:52 @monitor.py:459] learning_rate: 0.01
+[1220 05:24:52 @monitor.py:459] train-error-top1: 0.3456
+[1220 05:24:52 @monitor.py:459] train-error-top5: 0.14812
+[1220 05:24:52 @monitor.py:459] val-error-top1: 0.29926
+[1220 05:24:52 @monitor.py:459] val-error-top5: 0.10258
+[1220 05:24:52 @monitor.py:459] xentropy-loss: 1.4386
+[1220 05:24:52 @group.py:48] Callbacks took 36.263 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 05:24:52 @base.py:275] Start Epoch 43 ...
+[1220 05:40:23 @base.py:285] Epoch 43 (global_step 215172) finished, time:15 minutes 31 seconds.
+[1220 05:40:23 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 05:40:25 @saver.py:77] Model saved to train_log/ResNet50-GN/model-215172.
+[1220 05:40:25 @misc.py:109] Estimated Time Left: 16 hours 41 minutes 9 seconds
+[1220 05:41:01 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.716
+[1220 05:41:01 @monitor.py:459] QueueInput/queue_size: 49.976
+[1220 05:41:01 @monitor.py:459] l2_regularize_loss: 0.60402
+[1220 05:41:01 @monitor.py:459] learning_rate: 0.01
+[1220 05:41:01 @monitor.py:459] train-error-top1: 0.31951
+[1220 05:41:01 @monitor.py:459] train-error-top5: 0.11835
+[1220 05:41:01 @monitor.py:459] val-error-top1: 0.3029
+[1220 05:41:01 @monitor.py:459] val-error-top5: 0.10324
+[1220 05:41:01 @monitor.py:459] xentropy-loss: 1.3135
+[1220 05:41:01 @group.py:48] Callbacks took 37.975 sec in total. DataParallelInferenceRunner: 36.7 seconds
+[1220 05:41:01 @base.py:275] Start Epoch 44 ...
+[1220 05:56:34 @base.py:285] Epoch 44 (global_step 220176) finished, time:15 minutes 32 seconds.
+[1220 05:56:34 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 05:56:34 @saver.py:77] Model saved to train_log/ResNet50-GN/model-220176.
+[1220 05:56:34 @misc.py:109] Estimated Time Left: 16 hours 24 minutes 27 seconds
+[1220 05:57:10 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.698
+[1220 05:57:10 @monitor.py:459] QueueInput/queue_size: 49.108
+[1220 05:57:10 @monitor.py:459] l2_regularize_loss: 0.595
+[1220 05:57:10 @monitor.py:459] learning_rate: 0.01
+[1220 05:57:10 @monitor.py:459] train-error-top1: 0.33463
+[1220 05:57:10 @monitor.py:459] train-error-top5: 0.12677
+[1220 05:57:10 @monitor.py:459] val-error-top1: 0.30316
+[1220 05:57:10 @monitor.py:459] val-error-top5: 0.10388
+[1220 05:57:10 @monitor.py:459] xentropy-loss: 1.3617
+[1220 05:57:10 @group.py:48] Callbacks took 36.666 sec in total. DataParallelInferenceRunner: 35.8 seconds
+[1220 05:57:10 @base.py:275] Start Epoch 45 ...
+[1220 06:12:38 @base.py:285] Epoch 45 (global_step 225180) finished, time:15 minutes 28 seconds.
+[1220 06:12:38 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 06:12:40 @saver.py:77] Model saved to train_log/ResNet50-GN/model-225180.
+[1220 06:12:40 @misc.py:109] Estimated Time Left: 16 hours 7 minutes 37 seconds
+[1220 06:13:14 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.49
+[1220 06:13:14 @monitor.py:459] QueueInput/queue_size: 49.624
+[1220 06:13:14 @monitor.py:459] l2_regularize_loss: 0.58809
+[1220 06:13:14 @monitor.py:459] learning_rate: 0.01
+[1220 06:13:14 @monitor.py:459] train-error-top1: 0.32678
+[1220 06:13:14 @monitor.py:459] train-error-top5: 0.13956
+[1220 06:13:14 @monitor.py:459] val-error-top1: 0.30618
+[1220 06:13:14 @monitor.py:459] val-error-top5: 0.10432
+[1220 06:13:14 @monitor.py:459] xentropy-loss: 1.3582
+[1220 06:13:14 @group.py:48] Callbacks took 36.134 sec in total. DataParallelInferenceRunner: 34.7 seconds
+[1220 06:13:14 @base.py:275] Start Epoch 46 ...
+[1220 06:28:45 @base.py:285] Epoch 46 (global_step 230184) finished, time:15 minutes 30 seconds.
+[1220 06:28:45 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 06:28:45 @saver.py:77] Model saved to train_log/ResNet50-GN/model-230184.
+[1220 06:28:45 @misc.py:109] Estimated Time Left: 15 hours 50 minutes 56 seconds
+[1220 06:29:22 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.799
+[1220 06:29:22 @monitor.py:459] QueueInput/queue_size: 49.437
+[1220 06:29:22 @monitor.py:459] l2_regularize_loss: 0.58244
+[1220 06:29:22 @monitor.py:459] learning_rate: 0.01
+[1220 06:29:22 @monitor.py:459] train-error-top1: 0.33178
+[1220 06:29:22 @monitor.py:459] train-error-top5: 0.13472
+[1220 06:29:22 @monitor.py:459] val-error-top1: 0.30406
+[1220 06:29:22 @monitor.py:459] val-error-top5: 0.10452
+[1220 06:29:22 @monitor.py:459] xentropy-loss: 1.4023
+[1220 06:29:22 @group.py:48] Callbacks took 37.117 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 06:29:22 @base.py:275] Start Epoch 47 ...
+[1220 06:44:53 @base.py:285] Epoch 47 (global_step 235188) finished, time:15 minutes 31 seconds.
+[1220 06:44:53 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 06:44:54 @saver.py:77] Model saved to train_log/ResNet50-GN/model-235188.
+[1220 06:44:54 @misc.py:109] Estimated Time Left: 15 hours 35 minutes 8 seconds
+[1220 06:45:28 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.912
+[1220 06:45:28 @monitor.py:459] QueueInput/queue_size: 48.968
+[1220 06:45:28 @monitor.py:459] l2_regularize_loss: 0.57835
+[1220 06:45:28 @monitor.py:459] learning_rate: 0.01
+[1220 06:45:28 @monitor.py:459] train-error-top1: 0.36798
+[1220 06:45:28 @monitor.py:459] train-error-top5: 0.16153
+[1220 06:45:28 @monitor.py:459] val-error-top1: 0.30306
+[1220 06:45:28 @monitor.py:459] val-error-top5: 0.10444
+[1220 06:45:28 @monitor.py:459] xentropy-loss: 1.5778
+[1220 06:45:28 @group.py:48] Callbacks took 35.133 sec in total. DataParallelInferenceRunner: 34.3 seconds
+[1220 06:45:28 @base.py:275] Start Epoch 48 ...
+[1220 07:00:56 @base.py:285] Epoch 48 (global_step 240192) finished, time:15 minutes 27 seconds.
+[1220 07:00:56 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 07:00:58 @saver.py:77] Model saved to train_log/ResNet50-GN/model-240192.
+[1220 07:00:58 @misc.py:109] Estimated Time Left: 15 hours 18 minutes 15 seconds
+[1220 07:01:34 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.988
+[1220 07:01:34 @monitor.py:459] QueueInput/queue_size: 49.933
+[1220 07:01:34 @monitor.py:459] l2_regularize_loss: 0.57538
+[1220 07:01:34 @monitor.py:459] learning_rate: 0.01
+[1220 07:01:34 @monitor.py:459] train-error-top1: 0.34874
+[1220 07:01:34 @monitor.py:459] train-error-top5: 0.11228
+[1220 07:01:34 @monitor.py:459] val-error-top1: 0.30674
+[1220 07:01:34 @monitor.py:459] val-error-top5: 0.10728
+[1220 07:01:34 @monitor.py:459] xentropy-loss: 1.3732
+[1220 07:01:34 @group.py:48] Callbacks took 37.769 sec in total. DataParallelInferenceRunner: 36.2 seconds
+[1220 07:01:34 @base.py:275] Start Epoch 49 ...
+[1220 07:17:04 @base.py:285] Epoch 49 (global_step 245196) finished, time:15 minutes 29 seconds.
+[1220 07:17:04 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 07:17:04 @saver.py:77] Model saved to train_log/ResNet50-GN/model-245196.
+[1220 07:17:04 @misc.py:109] Estimated Time Left: 15 hours 1 minute 37 seconds
+[1220 07:17:40 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.491
+[1220 07:17:40 @monitor.py:459] QueueInput/queue_size: 49.89
+[1220 07:17:40 @monitor.py:459] l2_regularize_loss: 0.57319
+[1220 07:17:40 @monitor.py:459] learning_rate: 0.01
+[1220 07:17:40 @monitor.py:459] train-error-top1: 0.35172
+[1220 07:17:40 @monitor.py:459] train-error-top5: 0.15466
+[1220 07:17:40 @monitor.py:459] val-error-top1: 0.30446
+[1220 07:17:40 @monitor.py:459] val-error-top5: 0.10482
+[1220 07:17:40 @monitor.py:459] xentropy-loss: 1.5106
+[1220 07:17:40 @group.py:48] Callbacks took 36.441 sec in total. DataParallelInferenceRunner: 35.8 seconds
+[1220 07:17:40 @base.py:275] Start Epoch 50 ...
+[1220 07:33:07 @base.py:285] Epoch 50 (global_step 250200) finished, time:15 minutes 26 seconds.
+[1220 07:33:07 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 07:33:08 @saver.py:77] Model saved to train_log/ResNet50-GN/model-250200.
+[1220 07:33:08 @misc.py:109] Estimated Time Left: 14 hours 45 minutes 9 seconds
+[1220 07:33:45 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.671
+[1220 07:33:45 @monitor.py:459] QueueInput/queue_size: 48.48
+[1220 07:33:45 @monitor.py:459] l2_regularize_loss: 0.57171
+[1220 07:33:45 @monitor.py:459] learning_rate: 0.01
+[1220 07:33:45 @monitor.py:459] train-error-top1: 0.32571
+[1220 07:33:45 @monitor.py:459] train-error-top5: 0.12904
+[1220 07:33:45 @monitor.py:459] val-error-top1: 0.30704
+[1220 07:33:45 @monitor.py:459] val-error-top5: 0.10554
+[1220 07:33:45 @monitor.py:459] xentropy-loss: 1.3693
+[1220 07:33:45 @group.py:48] Callbacks took 38.515 sec in total. DataParallelInferenceRunner: 37.5 seconds
+[1220 07:33:45 @base.py:275] Start Epoch 51 ...
+[1220 07:49:14 @base.py:285] Epoch 51 (global_step 255204) finished, time:15 minutes 29 seconds.
+[1220 07:49:14 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 07:49:15 @saver.py:77] Model saved to train_log/ResNet50-GN/model-255204.
+[1220 07:49:15 @misc.py:109] Estimated Time Left: 14 hours 29 minutes 22 seconds
+[1220 07:49:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.805
+[1220 07:49:52 @monitor.py:459] QueueInput/queue_size: 48.095
+[1220 07:49:52 @monitor.py:459] l2_regularize_loss: 0.57085
+[1220 07:49:52 @monitor.py:459] learning_rate: 0.01
+[1220 07:49:52 @monitor.py:459] train-error-top1: 0.33655
+[1220 07:49:52 @monitor.py:459] train-error-top5: 0.14785
+[1220 07:49:52 @monitor.py:459] val-error-top1: 0.30544
+[1220 07:49:52 @monitor.py:459] val-error-top5: 0.10518
+[1220 07:49:52 @monitor.py:459] xentropy-loss: 1.4031
+[1220 07:49:52 @group.py:48] Callbacks took 37.228 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 07:49:52 @base.py:275] Start Epoch 52 ...
+[1220 08:05:22 @base.py:285] Epoch 52 (global_step 260208) finished, time:15 minutes 30 seconds.
+[1220 08:05:22 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 08:05:23 @saver.py:77] Model saved to train_log/ResNet50-GN/model-260208.
+[1220 08:05:23 @misc.py:109] Estimated Time Left: 14 hours 13 minutes 9 seconds
+[1220 08:06:00 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.392
+[1220 08:06:00 @monitor.py:459] QueueInput/queue_size: 48.857
+[1220 08:06:00 @monitor.py:459] l2_regularize_loss: 0.57034
+[1220 08:06:00 @monitor.py:459] learning_rate: 0.01
+[1220 08:06:00 @monitor.py:459] train-error-top1: 0.34746
+[1220 08:06:00 @monitor.py:459] train-error-top5: 0.14839
+[1220 08:06:00 @monitor.py:459] val-error-top1: 0.3029
+[1220 08:06:00 @monitor.py:459] val-error-top5: 0.10404
+[1220 08:06:00 @monitor.py:459] xentropy-loss: 1.4542
+[1220 08:06:00 @group.py:48] Callbacks took 37.860 sec in total. DataParallelInferenceRunner: 36.5 seconds
+[1220 08:06:00 @base.py:275] Start Epoch 53 ...
+[1220 08:21:30 @base.py:285] Epoch 53 (global_step 265212) finished, time:15 minutes 30 seconds.
+[1220 08:21:30 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 08:21:31 @saver.py:77] Model saved to train_log/ResNet50-GN/model-265212.
+[1220 08:21:31 @misc.py:109] Estimated Time Left: 13 hours 57 minutes 46 seconds
+[1220 08:22:08 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.527
+[1220 08:22:08 @monitor.py:459] QueueInput/queue_size: 49.655
+[1220 08:22:08 @monitor.py:459] l2_regularize_loss: 0.57029
+[1220 08:22:08 @monitor.py:459] learning_rate: 0.01
+[1220 08:22:08 @monitor.py:459] train-error-top1: 0.33386
+[1220 08:22:08 @monitor.py:459] train-error-top5: 0.13932
+[1220 08:22:08 @monitor.py:459] val-error-top1: 0.30314
+[1220 08:22:08 @monitor.py:459] val-error-top5: 0.1058
+[1220 08:22:08 @monitor.py:459] xentropy-loss: 1.3957
+[1220 08:22:08 @group.py:48] Callbacks took 37.756 sec in total. DataParallelInferenceRunner: 36.9 seconds
+[1220 08:22:08 @base.py:275] Start Epoch 54 ...
+[1220 08:37:43 @base.py:285] Epoch 54 (global_step 270216) finished, time:15 minutes 35 seconds.
+[1220 08:37:43 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 08:37:44 @saver.py:77] Model saved to train_log/ResNet50-GN/model-270216.
+[1220 08:37:44 @misc.py:109] Estimated Time Left: 13 hours 42 minutes 42 seconds
+[1220 08:38:21 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.483
+[1220 08:38:21 @monitor.py:459] QueueInput/queue_size: 49.933
+[1220 08:38:21 @monitor.py:459] l2_regularize_loss: 0.57072
+[1220 08:38:21 @monitor.py:459] learning_rate: 0.01
+[1220 08:38:21 @monitor.py:459] train-error-top1: 0.32193
+[1220 08:38:21 @monitor.py:459] train-error-top5: 0.12531
+[1220 08:38:21 @monitor.py:459] val-error-top1: 0.30208
+[1220 08:38:21 @monitor.py:459] val-error-top5: 0.10316
+[1220 08:38:21 @monitor.py:459] xentropy-loss: 1.3075
+[1220 08:38:21 @group.py:48] Callbacks took 38.013 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 08:38:21 @base.py:275] Start Epoch 55 ...
+[1220 08:53:51 @base.py:285] Epoch 55 (global_step 275220) finished, time:15 minutes 29 seconds.
+[1220 08:53:51 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 08:53:51 @saver.py:77] Model saved to train_log/ResNet50-GN/model-275220.
+[1220 08:53:51 @misc.py:109] Estimated Time Left: 13 hours 27 minutes 16 seconds
+[1220 08:54:26 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.933
+[1220 08:54:26 @monitor.py:459] QueueInput/queue_size: 49.211
+[1220 08:54:26 @monitor.py:459] l2_regularize_loss: 0.57132
+[1220 08:54:26 @monitor.py:459] learning_rate: 0.01
+[1220 08:54:26 @monitor.py:459] train-error-top1: 0.33489
+[1220 08:54:26 @monitor.py:459] train-error-top5: 0.13006
+[1220 08:54:26 @monitor.py:459] val-error-top1: 0.30596
+[1220 08:54:26 @monitor.py:459] val-error-top5: 0.10318
+[1220 08:54:26 @monitor.py:459] xentropy-loss: 1.4001
+[1220 08:54:26 @group.py:48] Callbacks took 35.820 sec in total. DataParallelInferenceRunner: 35 seconds
+[1220 08:54:26 @base.py:275] Start Epoch 56 ...
+[1220 09:09:52 @base.py:285] Epoch 56 (global_step 280224) finished, time:15 minutes 26 seconds.
+[1220 09:09:52 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 09:09:54 @saver.py:77] Model saved to train_log/ResNet50-GN/model-280224.
+[1220 09:09:54 @misc.py:109] Estimated Time Left: 13 hours 10 minutes 15 seconds
+[1220 09:10:30 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.513
+[1220 09:10:30 @monitor.py:459] QueueInput/queue_size: 49.898
+[1220 09:10:30 @monitor.py:459] l2_regularize_loss: 0.572
+[1220 09:10:30 @monitor.py:459] learning_rate: 0.01
+[1220 09:10:30 @monitor.py:459] train-error-top1: 0.34891
+[1220 09:10:30 @monitor.py:459] train-error-top5: 0.12646
+[1220 09:10:30 @monitor.py:459] val-error-top1: 0.3036
+[1220 09:10:30 @monitor.py:459] val-error-top5: 0.10546
+[1220 09:10:30 @monitor.py:459] xentropy-loss: 1.3773
+[1220 09:10:30 @group.py:48] Callbacks took 37.311 sec in total. DataParallelInferenceRunner: 36.1 seconds
+[1220 09:10:30 @base.py:275] Start Epoch 57 ...
+[1220 09:25:58 @base.py:285] Epoch 57 (global_step 285228) finished, time:15 minutes 28 seconds.
+[1220 09:25:58 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 09:25:59 @saver.py:77] Model saved to train_log/ResNet50-GN/model-285228.
+[1220 09:25:59 @misc.py:109] Estimated Time Left: 12 hours 53 minutes 46 seconds
+[1220 09:26:35 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.745
+[1220 09:26:35 @monitor.py:459] QueueInput/queue_size: 49.875
+[1220 09:26:35 @monitor.py:459] l2_regularize_loss: 0.57298
+[1220 09:26:35 @monitor.py:459] learning_rate: 0.01
+[1220 09:26:35 @monitor.py:459] train-error-top1: 0.29346
+[1220 09:26:35 @monitor.py:459] train-error-top5: 0.12984
+[1220 09:26:35 @monitor.py:459] val-error-top1: 0.30282
+[1220 09:26:35 @monitor.py:459] val-error-top5: 0.10292
+[1220 09:26:35 @monitor.py:459] xentropy-loss: 1.2997
+[1220 09:26:35 @group.py:48] Callbacks took 36.341 sec in total. DataParallelInferenceRunner: 35.5 seconds
+[1220 09:26:35 @base.py:275] Start Epoch 58 ...
+[1220 09:42:02 @base.py:285] Epoch 58 (global_step 290232) finished, time:15 minutes 27 seconds.
+[1220 09:42:02 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 09:42:03 @saver.py:77] Model saved to train_log/ResNet50-GN/model-290232.
+[1220 09:42:03 @misc.py:109] Estimated Time Left: 12 hours 37 minutes 3 seconds
+[1220 09:42:40 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.251
+[1220 09:42:40 @monitor.py:459] QueueInput/queue_size: 46.645
+[1220 09:42:40 @monitor.py:459] l2_regularize_loss: 0.57398
+[1220 09:42:40 @monitor.py:459] learning_rate: 0.01
+[1220 09:42:40 @monitor.py:459] train-error-top1: 0.32969
+[1220 09:42:40 @monitor.py:459] train-error-top5: 0.13757
+[1220 09:42:40 @monitor.py:459] val-error-top1: 0.30194
+[1220 09:42:40 @monitor.py:459] val-error-top5: 0.10376
+[1220 09:42:40 @monitor.py:459] xentropy-loss: 1.3976
+[1220 09:42:40 @group.py:48] Callbacks took 38.077 sec in total. DataParallelInferenceRunner: 36.8 seconds
+[1220 09:42:40 @base.py:275] Start Epoch 59 ...
+[1220 09:58:11 @base.py:285] Epoch 59 (global_step 295236) finished, time:15 minutes 30 seconds.
+[1220 09:58:11 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 09:58:11 @saver.py:77] Model saved to train_log/ResNet50-GN/model-295236.
+[1220 09:58:11 @misc.py:109] Estimated Time Left: 12 hours 20 minutes 13 seconds
+[1220 09:58:49 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.512
+[1220 09:58:49 @monitor.py:459] QueueInput/queue_size: 48.87
+[1220 09:58:49 @monitor.py:459] l2_regularize_loss: 0.57508
+[1220 09:58:49 @monitor.py:459] learning_rate: 0.01
+[1220 09:58:49 @monitor.py:459] train-error-top1: 0.36415
+[1220 09:58:49 @monitor.py:459] train-error-top5: 0.15245
+[1220 09:58:49 @monitor.py:459] val-error-top1: 0.30198
+[1220 09:58:49 @monitor.py:459] val-error-top5: 0.10324
+[1220 09:58:49 @monitor.py:459] xentropy-loss: 1.4908
+[1220 09:58:49 @group.py:48] Callbacks took 37.931 sec in total. DataParallelInferenceRunner: 37.2 seconds
+[1220 09:58:49 @base.py:275] Start Epoch 60 ...
+[1220 10:14:14 @base.py:285] Epoch 60 (global_step 300240) finished, time:15 minutes 25 seconds.
+[1220 10:14:14 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 10:14:14 @saver.py:77] Model saved to train_log/ResNet50-GN/model-300240.
+[1220 10:14:14 @misc.py:109] Estimated Time Left: 12 hours 3 minutes 27 seconds
+[1220 10:14:14 @param.py:161] [HyperParamSetter] At global_step=300240, learning_rate changes from 0.010000 to 0.001000
+[1220 10:14:50 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.446
+[1220 10:14:50 @monitor.py:459] QueueInput/queue_size: 49.644
+[1220 10:14:50 @monitor.py:459] l2_regularize_loss: 0.57617
+[1220 10:14:50 @monitor.py:459] learning_rate: 0.01
+[1220 10:14:50 @monitor.py:459] train-error-top1: 0.34577
+[1220 10:14:50 @monitor.py:459] train-error-top5: 0.14769
+[1220 10:14:50 @monitor.py:459] val-error-top1: 0.3019
+[1220 10:14:50 @monitor.py:459] val-error-top5: 0.10312
+[1220 10:14:50 @monitor.py:459] xentropy-loss: 1.4766
+[1220 10:14:50 @group.py:48] Callbacks took 36.075 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 10:14:50 @base.py:275] Start Epoch 61 ...
+[1220 10:30:19 @base.py:285] Epoch 61 (global_step 305244) finished, time:15 minutes 29 seconds.
+[1220 10:30:19 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 10:30:20 @saver.py:77] Model saved to train_log/ResNet50-GN/model-305244.
+[1220 10:30:20 @misc.py:109] Estimated Time Left: 11 hours 47 minutes 55 seconds
+[1220 10:30:57 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.704
+[1220 10:30:57 @monitor.py:459] QueueInput/queue_size: 49.148
+[1220 10:30:57 @monitor.py:459] l2_regularize_loss: 0.57207
+[1220 10:30:57 @monitor.py:459] learning_rate: 0.001
+[1220 10:30:57 @monitor.py:459] train-error-top1: 0.27499
+[1220 10:30:57 @monitor.py:459] train-error-top5: 0.10761
+[1220 10:30:57 @monitor.py:459] val-error-top1: 0.2593
+[1220 10:30:57 @monitor.py:459] val-error-top5: 0.08094
+[1220 10:30:57 @monitor.py:459] xentropy-loss: 1.1287
+[1220 10:30:57 @group.py:48] Callbacks took 38.237 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 10:30:57 @base.py:275] Start Epoch 62 ...
+[1220 10:46:24 @base.py:285] Epoch 62 (global_step 310248) finished, time:15 minutes 26 seconds.
+[1220 10:46:24 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 10:46:25 @saver.py:77] Model saved to train_log/ResNet50-GN/model-310248.
+[1220 10:46:25 @misc.py:109] Estimated Time Left: 11 hours 31 minutes 41 seconds
+[1220 10:47:02 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.707
+[1220 10:47:02 @monitor.py:459] QueueInput/queue_size: 49.994
+[1220 10:47:02 @monitor.py:459] l2_regularize_loss: 0.56795
+[1220 10:47:02 @monitor.py:459] learning_rate: 0.001
+[1220 10:47:02 @monitor.py:459] train-error-top1: 0.24465
+[1220 10:47:02 @monitor.py:459] train-error-top5: 0.076136
+[1220 10:47:02 @monitor.py:459] val-error-top1: 0.25696
+[1220 10:47:02 @monitor.py:459] val-error-top5: 0.07904
+[1220 10:47:02 @monitor.py:459] xentropy-loss: 0.96463
+[1220 10:47:02 @group.py:48] Callbacks took 37.964 sec in total. DataParallelInferenceRunner: 37.2 seconds
+[1220 10:47:02 @base.py:275] Start Epoch 63 ...
+[1220 11:02:28 @base.py:285] Epoch 63 (global_step 315252) finished, time:15 minutes 25 seconds.
+[1220 11:02:28 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 11:02:30 @saver.py:77] Model saved to train_log/ResNet50-GN/model-315252.
+[1220 11:02:30 @misc.py:109] Estimated Time Left: 11 hours 15 minutes 41 seconds
+[1220 11:03:05 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.969
+[1220 11:03:05 @monitor.py:459] QueueInput/queue_size: 49.855
+[1220 11:03:05 @monitor.py:459] l2_regularize_loss: 0.5639
+[1220 11:03:05 @monitor.py:459] learning_rate: 0.001
+[1220 11:03:05 @monitor.py:459] train-error-top1: 0.25982
+[1220 11:03:05 @monitor.py:459] train-error-top5: 0.095395
+[1220 11:03:05 @monitor.py:459] val-error-top1: 0.25678
+[1220 11:03:05 @monitor.py:459] val-error-top5: 0.07924
+[1220 11:03:05 @monitor.py:459] xentropy-loss: 1.0546
+[1220 11:03:05 @group.py:48] Callbacks took 36.826 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 11:03:05 @base.py:275] Start Epoch 64 ...
+[1220 11:18:38 @base.py:285] Epoch 64 (global_step 320256) finished, time:15 minutes 33 seconds.
+[1220 11:18:38 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 11:18:39 @saver.py:77] Model saved to train_log/ResNet50-GN/model-320256.
+[1220 11:18:39 @misc.py:109] Estimated Time Left: 10 hours 59 minutes 46 seconds
+[1220 11:19:16 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.526
+[1220 11:19:16 @monitor.py:459] QueueInput/queue_size: 48.715
+[1220 11:19:16 @monitor.py:459] l2_regularize_loss: 0.55994
+[1220 11:19:16 @monitor.py:459] learning_rate: 0.001
+[1220 11:19:16 @monitor.py:459] train-error-top1: 0.28529
+[1220 11:19:16 @monitor.py:459] train-error-top5: 0.11857
+[1220 11:19:16 @monitor.py:459] val-error-top1: 0.25352
+[1220 11:19:16 @monitor.py:459] val-error-top5: 0.07738
+[1220 11:19:16 @monitor.py:459] xentropy-loss: 1.1635
+[1220 11:19:16 @group.py:48] Callbacks took 37.881 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 11:19:16 @base.py:275] Start Epoch 65 ...
+[1220 11:34:42 @base.py:285] Epoch 65 (global_step 325260) finished, time:15 minutes 26 seconds.
+[1220 11:34:42 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 11:34:43 @saver.py:77] Model saved to train_log/ResNet50-GN/model-325260.
+[1220 11:34:43 @misc.py:109] Estimated Time Left: 10 hours 43 minutes 50 seconds
+[1220 11:35:19 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.826
+[1220 11:35:19 @monitor.py:459] QueueInput/queue_size: 49.903
+[1220 11:35:19 @monitor.py:459] l2_regularize_loss: 0.55604
+[1220 11:35:19 @monitor.py:459] learning_rate: 0.001
+[1220 11:35:19 @monitor.py:459] train-error-top1: 0.23574
+[1220 11:35:19 @monitor.py:459] train-error-top5: 0.084306
+[1220 11:35:19 @monitor.py:459] val-error-top1: 0.2541
+[1220 11:35:19 @monitor.py:459] val-error-top5: 0.07666
+[1220 11:35:19 @monitor.py:459] xentropy-loss: 0.96653
+[1220 11:35:19 @group.py:48] Callbacks took 36.847 sec in total. DataParallelInferenceRunner: 35.7 seconds
+[1220 11:35:19 @base.py:275] Start Epoch 66 ...
+[1220 11:50:52 @base.py:285] Epoch 66 (global_step 330264) finished, time:15 minutes 32 seconds.
+[1220 11:50:52 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 11:50:52 @saver.py:77] Model saved to train_log/ResNet50-GN/model-330264.
+[1220 11:50:52 @misc.py:109] Estimated Time Left: 10 hours 28 minutes 9 seconds
+[1220 11:51:28 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.511
+[1220 11:51:28 @monitor.py:459] QueueInput/queue_size: 49.566
+[1220 11:51:28 @monitor.py:459] l2_regularize_loss: 0.55222
+[1220 11:51:28 @monitor.py:459] learning_rate: 0.001
+[1220 11:51:28 @monitor.py:459] train-error-top1: 0.23984
+[1220 11:51:28 @monitor.py:459] train-error-top5: 0.087405
+[1220 11:51:28 @monitor.py:459] val-error-top1: 0.25372
+[1220 11:51:28 @monitor.py:459] val-error-top5: 0.07694
+[1220 11:51:28 @monitor.py:459] xentropy-loss: 0.96612
+[1220 11:51:28 @group.py:48] Callbacks took 36.656 sec in total. DataParallelInferenceRunner: 35.9 seconds
+[1220 11:51:28 @base.py:275] Start Epoch 67 ...
+[1220 12:06:53 @base.py:285] Epoch 67 (global_step 335268) finished, time:15 minutes 25 seconds.
+[1220 12:06:53 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 12:06:55 @saver.py:77] Model saved to train_log/ResNet50-GN/model-335268.
+[1220 12:06:55 @misc.py:109] Estimated Time Left: 10 hours 11 minutes 44 seconds
+[1220 12:07:32 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.912
+[1220 12:07:32 @monitor.py:459] QueueInput/queue_size: 49.724
+[1220 12:07:32 @monitor.py:459] l2_regularize_loss: 0.54847
+[1220 12:07:32 @monitor.py:459] learning_rate: 0.001
+[1220 12:07:32 @monitor.py:459] train-error-top1: 0.22314
+[1220 12:07:32 @monitor.py:459] train-error-top5: 0.087155
+[1220 12:07:32 @monitor.py:459] val-error-top1: 0.2533
+[1220 12:07:32 @monitor.py:459] val-error-top5: 0.07658
+[1220 12:07:32 @monitor.py:459] xentropy-loss: 0.96608
+[1220 12:07:32 @group.py:48] Callbacks took 38.422 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 12:07:32 @base.py:275] Start Epoch 68 ...
+[1220 12:23:02 @base.py:285] Epoch 68 (global_step 340272) finished, time:15 minutes 30 seconds.
+[1220 12:23:02 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 12:23:03 @saver.py:77] Model saved to train_log/ResNet50-GN/model-340272.
+[1220 12:23:03 @misc.py:109] Estimated Time Left: 9 hours 56 minutes 8 seconds
+[1220 12:23:40 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.673
+[1220 12:23:40 @monitor.py:459] QueueInput/queue_size: 48.931
+[1220 12:23:40 @monitor.py:459] l2_regularize_loss: 0.54479
+[1220 12:23:40 @monitor.py:459] learning_rate: 0.001
+[1220 12:23:40 @monitor.py:459] train-error-top1: 0.26313
+[1220 12:23:40 @monitor.py:459] train-error-top5: 0.10635
+[1220 12:23:40 @monitor.py:459] val-error-top1: 0.25236
+[1220 12:23:40 @monitor.py:459] val-error-top5: 0.07576
+[1220 12:23:40 @monitor.py:459] xentropy-loss: 1.0733
+[1220 12:23:40 @group.py:48] Callbacks took 37.226 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 12:23:40 @base.py:275] Start Epoch 69 ...
+[1220 12:39:10 @base.py:285] Epoch 69 (global_step 345276) finished, time:15 minutes 30 seconds.
+[1220 12:39:10 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 12:39:11 @saver.py:77] Model saved to train_log/ResNet50-GN/model-345276.
+[1220 12:39:11 @misc.py:109] Estimated Time Left: 9 hours 39 minutes 48 seconds
+[1220 12:39:47 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.555
+[1220 12:39:47 @monitor.py:459] QueueInput/queue_size: 48.32
+[1220 12:39:47 @monitor.py:459] l2_regularize_loss: 0.54118
+[1220 12:39:47 @monitor.py:459] learning_rate: 0.001
+[1220 12:39:47 @monitor.py:459] train-error-top1: 0.27921
+[1220 12:39:47 @monitor.py:459] train-error-top5: 0.11033
+[1220 12:39:47 @monitor.py:459] val-error-top1: 0.2535
+[1220 12:39:47 @monitor.py:459] val-error-top5: 0.07518
+[1220 12:39:47 @monitor.py:459] xentropy-loss: 1.1452
+[1220 12:39:47 @group.py:48] Callbacks took 37.519 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 12:39:47 @base.py:275] Start Epoch 70 ...
+[1220 12:55:17 @base.py:285] Epoch 70 (global_step 350280) finished, time:15 minutes 29 seconds.
+[1220 12:55:17 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 12:55:17 @saver.py:77] Model saved to train_log/ResNet50-GN/model-350280.
+[1220 12:55:17 @misc.py:109] Estimated Time Left: 9 hours 23 minutes 58 seconds
+[1220 12:55:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.792
+[1220 12:55:52 @monitor.py:459] QueueInput/queue_size: 48.964
+[1220 12:55:52 @monitor.py:459] l2_regularize_loss: 0.53764
+[1220 12:55:52 @monitor.py:459] learning_rate: 0.001
+[1220 12:55:52 @monitor.py:459] train-error-top1: 0.24691
+[1220 12:55:52 @monitor.py:459] train-error-top5: 0.085683
+[1220 12:55:52 @monitor.py:459] val-error-top1: 0.25148
+[1220 12:55:52 @monitor.py:459] val-error-top5: 0.07566
+[1220 12:55:52 @monitor.py:459] xentropy-loss: 1.0326
+[1220 12:55:52 @group.py:48] Callbacks took 35.354 sec in total. DataParallelInferenceRunner: 34.3 seconds
+[1220 12:55:52 @base.py:275] Start Epoch 71 ...
+[1220 13:11:22 @base.py:285] Epoch 71 (global_step 355284) finished, time:15 minutes 29 seconds.
+[1220 13:11:22 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 13:11:23 @saver.py:77] Model saved to train_log/ResNet50-GN/model-355284.
+[1220 13:11:23 @misc.py:109] Estimated Time Left: 9 hours 7 minutes 27 seconds
+[1220 13:11:59 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.502
+[1220 13:11:59 @monitor.py:459] QueueInput/queue_size: 48.872
+[1220 13:11:59 @monitor.py:459] l2_regularize_loss: 0.53416
+[1220 13:11:59 @monitor.py:459] learning_rate: 0.001
+[1220 13:11:59 @monitor.py:459] train-error-top1: 0.2355
+[1220 13:11:59 @monitor.py:459] train-error-top5: 0.074625
+[1220 13:11:59 @monitor.py:459] val-error-top1: 0.2503
+[1220 13:11:59 @monitor.py:459] val-error-top5: 0.07518
+[1220 13:11:59 @monitor.py:459] xentropy-loss: 0.91215
+[1220 13:11:59 @group.py:48] Callbacks took 37.116 sec in total. DataParallelInferenceRunner: 35.7 seconds
+[1220 13:11:59 @base.py:275] Start Epoch 72 ...
+[1220 13:27:29 @base.py:285] Epoch 72 (global_step 360288) finished, time:15 minutes 30 seconds.
+[1220 13:27:29 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 13:27:30 @saver.py:77] Model saved to train_log/ResNet50-GN/model-360288.
+[1220 13:27:30 @misc.py:109] Estimated Time Left: 8 hours 51 minutes 51 seconds
+[1220 13:28:06 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.843
+[1220 13:28:06 @monitor.py:459] QueueInput/queue_size: 49.802
+[1220 13:28:06 @monitor.py:459] l2_regularize_loss: 0.53075
+[1220 13:28:06 @monitor.py:459] learning_rate: 0.001
+[1220 13:28:06 @monitor.py:459] train-error-top1: 0.24661
+[1220 13:28:06 @monitor.py:459] train-error-top5: 0.084624
+[1220 13:28:06 @monitor.py:459] val-error-top1: 0.2503
+[1220 13:28:06 @monitor.py:459] val-error-top5: 0.07522
+[1220 13:28:06 @monitor.py:459] xentropy-loss: 0.99082
+[1220 13:28:06 @group.py:48] Callbacks took 37.314 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 13:28:06 @base.py:275] Start Epoch 73 ...
+[1220 13:43:37 @base.py:285] Epoch 73 (global_step 365292) finished, time:15 minutes 30 seconds.
+[1220 13:43:37 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 13:43:38 @saver.py:77] Model saved to train_log/ResNet50-GN/model-365292.
+[1220 13:43:38 @misc.py:109] Estimated Time Left: 8 hours 35 minutes 40 seconds
+[1220 13:44:14 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.936
+[1220 13:44:14 @monitor.py:459] QueueInput/queue_size: 47.967
+[1220 13:44:14 @monitor.py:459] l2_regularize_loss: 0.52737
+[1220 13:44:14 @monitor.py:459] learning_rate: 0.001
+[1220 13:44:14 @monitor.py:459] train-error-top1: 0.26836
+[1220 13:44:14 @monitor.py:459] train-error-top5: 0.10334
+[1220 13:44:14 @monitor.py:459] val-error-top1: 0.25118
+[1220 13:44:14 @monitor.py:459] val-error-top5: 0.0765
+[1220 13:44:14 @monitor.py:459] xentropy-loss: 1.0965
+[1220 13:44:14 @group.py:48] Callbacks took 36.827 sec in total. DataParallelInferenceRunner: 35.9 seconds
+[1220 13:44:14 @base.py:275] Start Epoch 74 ...
+[1220 13:59:44 @base.py:285] Epoch 74 (global_step 370296) finished, time:15 minutes 30 seconds.
+[1220 13:59:44 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 13:59:45 @saver.py:77] Model saved to train_log/ResNet50-GN/model-370296.
+[1220 13:59:45 @misc.py:109] Estimated Time Left: 8 hours 19 minutes 34 seconds
+[1220 14:00:23 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.616
+[1220 14:00:23 @monitor.py:459] QueueInput/queue_size: 49.998
+[1220 14:00:23 @monitor.py:459] l2_regularize_loss: 0.52406
+[1220 14:00:23 @monitor.py:459] learning_rate: 0.001
+[1220 14:00:23 @monitor.py:459] train-error-top1: 0.23319
+[1220 14:00:23 @monitor.py:459] train-error-top5: 0.079777
+[1220 14:00:23 @monitor.py:459] val-error-top1: 0.24872
+[1220 14:00:23 @monitor.py:459] val-error-top5: 0.07436
+[1220 14:00:23 @monitor.py:459] xentropy-loss: 0.9349
+[1220 14:00:23 @group.py:48] Callbacks took 38.643 sec in total. DataParallelInferenceRunner: 37.4 seconds
+[1220 14:00:23 @base.py:275] Start Epoch 75 ...
+[1220 14:15:52 @base.py:285] Epoch 75 (global_step 375300) finished, time:15 minutes 28 seconds.
+[1220 14:15:52 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 14:15:52 @saver.py:77] Model saved to train_log/ResNet50-GN/model-375300.
+[1220 14:15:52 @misc.py:109] Estimated Time Left: 8 hours 3 minutes 29 seconds
+[1220 14:16:26 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.587
+[1220 14:16:26 @monitor.py:459] QueueInput/queue_size: 49.999
+[1220 14:16:26 @monitor.py:459] l2_regularize_loss: 0.52081
+[1220 14:16:26 @monitor.py:459] learning_rate: 0.001
+[1220 14:16:26 @monitor.py:459] train-error-top1: 0.23576
+[1220 14:16:26 @monitor.py:459] train-error-top5: 0.093449
+[1220 14:16:26 @monitor.py:459] val-error-top1: 0.25096
+[1220 14:16:26 @monitor.py:459] val-error-top5: 0.07546
+[1220 14:16:26 @monitor.py:459] xentropy-loss: 0.99722
+[1220 14:16:26 @group.py:48] Callbacks took 34.692 sec in total. DataParallelInferenceRunner: 33.8 seconds
+[1220 14:16:26 @base.py:275] Start Epoch 76 ...
+[1220 14:31:59 @base.py:285] Epoch 76 (global_step 380304) finished, time:15 minutes 32 seconds.
+[1220 14:31:59 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 14:32:00 @saver.py:77] Model saved to train_log/ResNet50-GN/model-380304.
+[1220 14:32:00 @misc.py:109] Estimated Time Left: 7 hours 47 minutes 38 seconds
+[1220 14:32:35 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.216
+[1220 14:32:35 @monitor.py:459] QueueInput/queue_size: 49.992
+[1220 14:32:35 @monitor.py:459] l2_regularize_loss: 0.51762
+[1220 14:32:35 @monitor.py:459] learning_rate: 0.001
+[1220 14:32:35 @monitor.py:459] train-error-top1: 0.21177
+[1220 14:32:35 @monitor.py:459] train-error-top5: 0.075433
+[1220 14:32:35 @monitor.py:459] val-error-top1: 0.25026
+[1220 14:32:35 @monitor.py:459] val-error-top5: 0.07504
+[1220 14:32:35 @monitor.py:459] xentropy-loss: 0.90503
+[1220 14:32:35 @group.py:48] Callbacks took 36.239 sec in total. DataParallelInferenceRunner: 34.8 seconds
+[1220 14:32:35 @base.py:275] Start Epoch 77 ...
+[1220 14:48:08 @base.py:285] Epoch 77 (global_step 385308) finished, time:15 minutes 32 seconds.
+[1220 14:48:08 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 14:48:09 @saver.py:77] Model saved to train_log/ResNet50-GN/model-385308.
+[1220 14:48:09 @misc.py:109] Estimated Time Left: 7 hours 31 minutes 39 seconds
+[1220 14:48:46 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.5
+[1220 14:48:46 @monitor.py:459] QueueInput/queue_size: 49.859
+[1220 14:48:46 @monitor.py:459] l2_regularize_loss: 0.51448
+[1220 14:48:46 @monitor.py:459] learning_rate: 0.001
+[1220 14:48:46 @monitor.py:459] train-error-top1: 0.22992
+[1220 14:48:46 @monitor.py:459] train-error-top5: 0.083061
+[1220 14:48:46 @monitor.py:459] val-error-top1: 0.2492
+[1220 14:48:46 @monitor.py:459] val-error-top5: 0.0738
+[1220 14:48:46 @monitor.py:459] xentropy-loss: 0.96071
+[1220 14:48:46 @group.py:48] Callbacks took 38.140 sec in total. DataParallelInferenceRunner: 37.1 seconds
+[1220 14:48:46 @base.py:275] Start Epoch 78 ...
+[1220 15:04:17 @base.py:285] Epoch 78 (global_step 390312) finished, time:15 minutes 30 seconds.
+[1220 15:04:17 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 15:04:18 @saver.py:77] Model saved to train_log/ResNet50-GN/model-390312.
+[1220 15:04:18 @misc.py:109] Estimated Time Left: 7 hours 15 minutes 39 seconds
+[1220 15:04:55 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.777
+[1220 15:04:55 @monitor.py:459] QueueInput/queue_size: 49.367
+[1220 15:04:55 @monitor.py:459] l2_regularize_loss: 0.51141
+[1220 15:04:55 @monitor.py:459] learning_rate: 0.001
+[1220 15:04:55 @monitor.py:459] train-error-top1: 0.23014
+[1220 15:04:55 @monitor.py:459] train-error-top5: 0.0854
+[1220 15:04:55 @monitor.py:459] val-error-top1: 0.24976
+[1220 15:04:55 @monitor.py:459] val-error-top5: 0.07506
+[1220 15:04:55 @monitor.py:459] xentropy-loss: 0.9932
+[1220 15:04:55 @group.py:48] Callbacks took 38.191 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 15:04:55 @base.py:275] Start Epoch 79 ...
+[1220 15:20:26 @base.py:285] Epoch 79 (global_step 395316) finished, time:15 minutes 30 seconds.
+[1220 15:20:26 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 15:20:27 @saver.py:77] Model saved to train_log/ResNet50-GN/model-395316.
+[1220 15:20:27 @misc.py:109] Estimated Time Left: 6 hours 59 minutes 33 seconds
+[1220 15:21:01 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.894
+[1220 15:21:01 @monitor.py:459] QueueInput/queue_size: 49.852
+[1220 15:21:01 @monitor.py:459] l2_regularize_loss: 0.50839
+[1220 15:21:01 @monitor.py:459] learning_rate: 0.001
+[1220 15:21:01 @monitor.py:459] train-error-top1: 0.24555
+[1220 15:21:01 @monitor.py:459] train-error-top5: 0.082539
+[1220 15:21:01 @monitor.py:459] val-error-top1: 0.24866
+[1220 15:21:01 @monitor.py:459] val-error-top5: 0.07382
+[1220 15:21:01 @monitor.py:459] xentropy-loss: 0.99091
+[1220 15:21:01 @group.py:48] Callbacks took 34.981 sec in total. DataParallelInferenceRunner: 34.1 seconds
+[1220 15:21:01 @base.py:275] Start Epoch 80 ...
+[1220 15:36:29 @base.py:285] Epoch 80 (global_step 400320) finished, time:15 minutes 28 seconds.
+[1220 15:36:29 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 15:36:30 @saver.py:77] Model saved to train_log/ResNet50-GN/model-400320.
+[1220 15:36:30 @misc.py:109] Estimated Time Left: 6 hours 43 minutes 10 seconds
+[1220 15:37:07 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.827
+[1220 15:37:07 @monitor.py:459] QueueInput/queue_size: 49.25
+[1220 15:37:07 @monitor.py:459] l2_regularize_loss: 0.5054
+[1220 15:37:07 @monitor.py:459] learning_rate: 0.001
+[1220 15:37:07 @monitor.py:459] train-error-top1: 0.23888
+[1220 15:37:07 @monitor.py:459] train-error-top5: 0.083035
+[1220 15:37:07 @monitor.py:459] val-error-top1: 0.25068
+[1220 15:37:07 @monitor.py:459] val-error-top5: 0.07462
+[1220 15:37:07 @monitor.py:459] xentropy-loss: 0.97857
+[1220 15:37:07 @group.py:48] Callbacks took 38.379 sec in total. DataParallelInferenceRunner: 37 seconds
+[1220 15:37:07 @base.py:275] Start Epoch 81 ...
+[1220 15:52:42 @base.py:285] Epoch 81 (global_step 405324) finished, time:15 minutes 34 seconds.
+[1220 15:52:42 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 15:52:42 @saver.py:77] Model saved to train_log/ResNet50-GN/model-405324.
+[1220 15:52:42 @misc.py:109] Estimated Time Left: 6 hours 27 minutes 21 seconds
+[1220 15:53:19 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.108
+[1220 15:53:19 @monitor.py:459] QueueInput/queue_size: 48.999
+[1220 15:53:19 @monitor.py:459] l2_regularize_loss: 0.50247
+[1220 15:53:19 @monitor.py:459] learning_rate: 0.001
+[1220 15:53:19 @monitor.py:459] train-error-top1: 0.23734
+[1220 15:53:19 @monitor.py:459] train-error-top5: 0.085013
+[1220 15:53:19 @monitor.py:459] val-error-top1: 0.24884
+[1220 15:53:19 @monitor.py:459] val-error-top5: 0.0744
+[1220 15:53:19 @monitor.py:459] xentropy-loss: 0.96962
+[1220 15:53:19 @group.py:48] Callbacks took 37.043 sec in total. DataParallelInferenceRunner: 36.2 seconds
+[1220 15:53:19 @base.py:275] Start Epoch 82 ...
+[1220 16:08:47 @base.py:285] Epoch 82 (global_step 410328) finished, time:15 minutes 28 seconds.
+[1220 16:08:47 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 16:08:48 @saver.py:77] Model saved to train_log/ResNet50-GN/model-410328.
+[1220 16:08:48 @misc.py:109] Estimated Time Left: 6 hours 11 minutes
+[1220 16:09:24 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.159
+[1220 16:09:24 @monitor.py:459] QueueInput/queue_size: 49.867
+[1220 16:09:24 @monitor.py:459] l2_regularize_loss: 0.49959
+[1220 16:09:24 @monitor.py:459] learning_rate: 0.001
+[1220 16:09:24 @monitor.py:459] train-error-top1: 0.25081
+[1220 16:09:24 @monitor.py:459] train-error-top5: 0.082615
+[1220 16:09:24 @monitor.py:459] val-error-top1: 0.24892
+[1220 16:09:24 @monitor.py:459] val-error-top5: 0.07588
+[1220 16:09:24 @monitor.py:459] xentropy-loss: 0.98976
+[1220 16:09:24 @group.py:48] Callbacks took 37.127 sec in total. DataParallelInferenceRunner: 35.9 seconds
+[1220 16:09:24 @base.py:275] Start Epoch 83 ...
+[1220 16:24:55 @base.py:285] Epoch 83 (global_step 415332) finished, time:15 minutes 31 seconds.
+[1220 16:24:55 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 16:24:56 @saver.py:77] Model saved to train_log/ResNet50-GN/model-415332.
+[1220 16:24:56 @misc.py:109] Estimated Time Left: 5 hours 54 minutes 46 seconds
+[1220 16:25:33 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.895
+[1220 16:25:33 @monitor.py:459] QueueInput/queue_size: 49.168
+[1220 16:25:33 @monitor.py:459] l2_regularize_loss: 0.49675
+[1220 16:25:33 @monitor.py:459] learning_rate: 0.001
+[1220 16:25:33 @monitor.py:459] train-error-top1: 0.24249
+[1220 16:25:33 @monitor.py:459] train-error-top5: 0.09201
+[1220 16:25:33 @monitor.py:459] val-error-top1: 0.2502
+[1220 16:25:33 @monitor.py:459] val-error-top5: 0.07458
+[1220 16:25:33 @monitor.py:459] xentropy-loss: 0.96869
+[1220 16:25:33 @group.py:48] Callbacks took 37.581 sec in total. DataParallelInferenceRunner: 36.7 seconds
+[1220 16:25:33 @base.py:275] Start Epoch 84 ...
+[1220 16:41:01 @base.py:285] Epoch 84 (global_step 420336) finished, time:15 minutes 27 seconds.
+[1220 16:41:01 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 16:41:02 @saver.py:77] Model saved to train_log/ResNet50-GN/model-420336.
+[1220 16:41:02 @misc.py:109] Estimated Time Left: 5 hours 38 minutes 28 seconds
+[1220 16:41:38 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.721
+[1220 16:41:38 @monitor.py:459] QueueInput/queue_size: 48.621
+[1220 16:41:38 @monitor.py:459] l2_regularize_loss: 0.49397
+[1220 16:41:38 @monitor.py:459] learning_rate: 0.001
+[1220 16:41:38 @monitor.py:459] train-error-top1: 0.22609
+[1220 16:41:38 @monitor.py:459] train-error-top5: 0.08156
+[1220 16:41:38 @monitor.py:459] val-error-top1: 0.25116
+[1220 16:41:38 @monitor.py:459] val-error-top5: 0.07522
+[1220 16:41:38 @monitor.py:459] xentropy-loss: 0.93087
+[1220 16:41:38 @group.py:48] Callbacks took 37.219 sec in total. DataParallelInferenceRunner: 35.9 seconds
+[1220 16:41:38 @base.py:275] Start Epoch 85 ...
+[1220 16:57:07 @base.py:285] Epoch 85 (global_step 425340) finished, time:15 minutes 29 seconds.
+[1220 16:57:07 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 16:57:08 @saver.py:77] Model saved to train_log/ResNet50-GN/model-425340.
+[1220 16:57:08 @misc.py:109] Estimated Time Left: 5 hours 22 minutes 31 seconds
+[1220 16:57:45 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.51
+[1220 16:57:45 @monitor.py:459] QueueInput/queue_size: 48.975
+[1220 16:57:45 @monitor.py:459] l2_regularize_loss: 0.49124
+[1220 16:57:45 @monitor.py:459] learning_rate: 0.001
+[1220 16:57:45 @monitor.py:459] train-error-top1: 0.23094
+[1220 16:57:45 @monitor.py:459] train-error-top5: 0.076492
+[1220 16:57:45 @monitor.py:459] val-error-top1: 0.2481
+[1220 16:57:45 @monitor.py:459] val-error-top5: 0.07466
+[1220 16:57:45 @monitor.py:459] xentropy-loss: 0.91941
+[1220 16:57:45 @group.py:48] Callbacks took 37.371 sec in total. DataParallelInferenceRunner: 36.3 seconds
+[1220 16:57:45 @base.py:275] Start Epoch 86 ...
+[1220 17:13:17 @base.py:285] Epoch 86 (global_step 430344) finished, time:15 minutes 31 seconds.
+[1220 17:13:17 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 17:13:18 @saver.py:77] Model saved to train_log/ResNet50-GN/model-430344.
+[1220 17:13:18 @misc.py:109] Estimated Time Left: 5 hours 6 minutes 17 seconds
+[1220 17:13:54 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.669
+[1220 17:13:54 @monitor.py:459] QueueInput/queue_size: 48.757
+[1220 17:13:54 @monitor.py:459] l2_regularize_loss: 0.48856
+[1220 17:13:54 @monitor.py:459] learning_rate: 0.001
+[1220 17:13:54 @monitor.py:459] train-error-top1: 0.23438
+[1220 17:13:54 @monitor.py:459] train-error-top5: 0.079232
+[1220 17:13:54 @monitor.py:459] val-error-top1: 0.24896
+[1220 17:13:54 @monitor.py:459] val-error-top5: 0.07556
+[1220 17:13:54 @monitor.py:459] xentropy-loss: 0.91409
+[1220 17:13:54 @group.py:48] Callbacks took 37.123 sec in total. DataParallelInferenceRunner: 35.2 seconds
+[1220 17:13:54 @base.py:275] Start Epoch 87 ...
+[1220 17:29:22 @base.py:285] Epoch 87 (global_step 435348) finished, time:15 minutes 28 seconds.
+[1220 17:29:22 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 17:29:23 @saver.py:77] Model saved to train_log/ResNet50-GN/model-435348.
+[1220 17:29:23 @misc.py:109] Estimated Time Left: 4 hours 50 minutes 6 seconds
+[1220 17:29:59 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.994
+[1220 17:29:59 @monitor.py:459] QueueInput/queue_size: 49.974
+[1220 17:29:59 @monitor.py:459] l2_regularize_loss: 0.48591
+[1220 17:29:59 @monitor.py:459] learning_rate: 0.001
+[1220 17:29:59 @monitor.py:459] train-error-top1: 0.22978
+[1220 17:29:59 @monitor.py:459] train-error-top5: 0.076965
+[1220 17:29:59 @monitor.py:459] val-error-top1: 0.25076
+[1220 17:29:59 @monitor.py:459] val-error-top5: 0.07648
+[1220 17:29:59 @monitor.py:459] xentropy-loss: 0.94284
+[1220 17:29:59 @group.py:48] Callbacks took 36.794 sec in total. DataParallelInferenceRunner: 35.5 seconds
+[1220 17:29:59 @base.py:275] Start Epoch 88 ...
+[1220 17:45:33 @base.py:285] Epoch 88 (global_step 440352) finished, time:15 minutes 34 seconds.
+[1220 17:45:33 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 17:45:34 @saver.py:77] Model saved to train_log/ResNet50-GN/model-440352.
+[1220 17:45:34 @misc.py:109] Estimated Time Left: 4 hours 34 minutes 10 seconds
+[1220 17:46:11 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.521
+[1220 17:46:11 @monitor.py:459] QueueInput/queue_size: 49.453
+[1220 17:46:11 @monitor.py:459] l2_regularize_loss: 0.48331
+[1220 17:46:11 @monitor.py:459] learning_rate: 0.001
+[1220 17:46:11 @monitor.py:459] train-error-top1: 0.24951
+[1220 17:46:11 @monitor.py:459] train-error-top5: 0.093167
+[1220 17:46:11 @monitor.py:459] val-error-top1: 0.25058
+[1220 17:46:11 @monitor.py:459] val-error-top5: 0.07568
+[1220 17:46:11 @monitor.py:459] xentropy-loss: 1.0192
+[1220 17:46:11 @group.py:48] Callbacks took 37.057 sec in total. DataParallelInferenceRunner: 36.2 seconds
+[1220 17:46:11 @base.py:275] Start Epoch 89 ...
+[1220 18:01:42 @base.py:285] Epoch 89 (global_step 445356) finished, time:15 minutes 31 seconds.
+[1220 18:01:42 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 18:01:44 @saver.py:77] Model saved to train_log/ResNet50-GN/model-445356.
+[1220 18:01:44 @misc.py:109] Estimated Time Left: 4 hours 18 minutes 13 seconds
+[1220 18:02:19 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.639
+[1220 18:02:19 @monitor.py:459] QueueInput/queue_size: 49.787
+[1220 18:02:19 @monitor.py:459] l2_regularize_loss: 0.48076
+[1220 18:02:19 @monitor.py:459] learning_rate: 0.001
+[1220 18:02:19 @monitor.py:459] train-error-top1: 0.24135
+[1220 18:02:19 @monitor.py:459] train-error-top5: 0.082169
+[1220 18:02:19 @monitor.py:459] val-error-top1: 0.24866
+[1220 18:02:19 @monitor.py:459] val-error-top5: 0.07588
+[1220 18:02:19 @monitor.py:459] xentropy-loss: 0.96759
+[1220 18:02:19 @group.py:48] Callbacks took 36.570 sec in total. DataParallelInferenceRunner: 35.1 seconds
+[1220 18:02:19 @base.py:275] Start Epoch 90 ...
+[1220 18:17:49 @base.py:285] Epoch 90 (global_step 450360) finished, time:15 minutes 30 seconds.
+[1220 18:17:49 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 18:17:50 @saver.py:77] Model saved to train_log/ResNet50-GN/model-450360.
+[1220 18:17:50 @misc.py:109] Estimated Time Left: 4 hours 2 minutes 4 seconds
+[1220 18:17:50 @param.py:161] [HyperParamSetter] At global_step=450360, learning_rate changes from 0.001000 to 0.000100
+[1220 18:18:26 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.553
+[1220 18:18:26 @monitor.py:459] QueueInput/queue_size: 49.924
+[1220 18:18:26 @monitor.py:459] l2_regularize_loss: 0.47825
+[1220 18:18:26 @monitor.py:459] learning_rate: 0.001
+[1220 18:18:26 @monitor.py:459] train-error-top1: 0.2287
+[1220 18:18:26 @monitor.py:459] train-error-top5: 0.075917
+[1220 18:18:26 @monitor.py:459] val-error-top1: 0.24786
+[1220 18:18:26 @monitor.py:459] val-error-top5: 0.0747
+[1220 18:18:26 @monitor.py:459] xentropy-loss: 0.90204
+[1220 18:18:26 @group.py:48] Callbacks took 36.755 sec in total. DataParallelInferenceRunner: 35.8 seconds
+[1220 18:18:26 @base.py:275] Start Epoch 91 ...
+[1220 18:33:56 @base.py:285] Epoch 91 (global_step 455364) finished, time:15 minutes 30 seconds.
+[1220 18:33:56 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 18:33:57 @saver.py:77] Model saved to train_log/ResNet50-GN/model-455364.
+[1220 18:33:57 @misc.py:109] Estimated Time Left: 3 hours 45 minutes 48 seconds
+[1220 18:34:34 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.463
+[1220 18:34:34 @monitor.py:459] QueueInput/queue_size: 48.662
+[1220 18:34:34 @monitor.py:459] l2_regularize_loss: 0.47791
+[1220 18:34:34 @monitor.py:459] learning_rate: 0.0001
+[1220 18:34:34 @monitor.py:459] train-error-top1: 0.20736
+[1220 18:34:34 @monitor.py:459] train-error-top5: 0.069128
+[1220 18:34:34 @monitor.py:459] val-error-top1: 0.24206
+[1220 18:34:34 @monitor.py:459] val-error-top5: 0.07228
+[1220 18:34:34 @monitor.py:459] xentropy-loss: 0.83322
+[1220 18:34:34 @group.py:48] Callbacks took 38.615 sec in total. DataParallelInferenceRunner: 37.3 seconds
+[1220 18:34:34 @base.py:275] Start Epoch 92 ...
+[1220 18:50:08 @base.py:285] Epoch 92 (global_step 460368) finished, time:15 minutes 33 seconds.
+[1220 18:50:08 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 18:50:08 @saver.py:77] Model saved to train_log/ResNet50-GN/model-460368.
+[1220 18:50:08 @misc.py:109] Estimated Time Left: 3 hours 29 minutes 57 seconds
+[1220 18:50:43 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.595
+[1220 18:50:43 @monitor.py:459] QueueInput/queue_size: 49.874
+[1220 18:50:43 @monitor.py:459] l2_regularize_loss: 0.47758
+[1220 18:50:43 @monitor.py:459] learning_rate: 0.0001
+[1220 18:50:43 @monitor.py:459] train-error-top1: 0.20522
+[1220 18:50:43 @monitor.py:459] train-error-top5: 0.071994
+[1220 18:50:43 @monitor.py:459] val-error-top1: 0.24232
+[1220 18:50:43 @monitor.py:459] val-error-top5: 0.07258
+[1220 18:50:43 @monitor.py:459] xentropy-loss: 0.78925
+[1220 18:50:43 @group.py:48] Callbacks took 35.536 sec in total. DataParallelInferenceRunner: 34.7 seconds
+[1220 18:50:43 @base.py:275] Start Epoch 93 ...
+[1220 19:06:16 @base.py:285] Epoch 93 (global_step 465372) finished, time:15 minutes 32 seconds.
+[1220 19:06:16 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 19:06:17 @saver.py:77] Model saved to train_log/ResNet50-GN/model-465372.
+[1220 19:06:17 @misc.py:109] Estimated Time Left: 3 hours 13 minutes 41 seconds
+[1220 19:06:52 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.798
+[1220 19:06:52 @monitor.py:459] QueueInput/queue_size: 48.525
+[1220 19:06:52 @monitor.py:459] l2_regularize_loss: 0.47726
+[1220 19:06:52 @monitor.py:459] learning_rate: 0.0001
+[1220 19:06:52 @monitor.py:459] train-error-top1: 0.20876
+[1220 19:06:52 @monitor.py:459] train-error-top5: 0.078308
+[1220 19:06:52 @monitor.py:459] val-error-top1: 0.24108
+[1220 19:06:52 @monitor.py:459] val-error-top5: 0.07204
+[1220 19:06:52 @monitor.py:459] xentropy-loss: 0.86852
+[1220 19:06:52 @group.py:48] Callbacks took 36.042 sec in total. DataParallelInferenceRunner: 34.9 seconds
+[1220 19:06:52 @base.py:275] Start Epoch 94 ...
+[1220 19:22:24 @base.py:285] Epoch 94 (global_step 470376) finished, time:15 minutes 32 seconds.
+[1220 19:22:24 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 19:22:25 @saver.py:77] Model saved to train_log/ResNet50-GN/model-470376.
+[1220 19:22:25 @misc.py:109] Estimated Time Left: 2 hours 57 minutes 31 seconds
+[1220 19:23:02 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.921
+[1220 19:23:02 @monitor.py:459] QueueInput/queue_size: 49.716
+[1220 19:23:02 @monitor.py:459] l2_regularize_loss: 0.47693
+[1220 19:23:02 @monitor.py:459] learning_rate: 0.0001
+[1220 19:23:02 @monitor.py:459] train-error-top1: 0.23638
+[1220 19:23:02 @monitor.py:459] train-error-top5: 0.085842
+[1220 19:23:02 @monitor.py:459] val-error-top1: 0.2413
+[1220 19:23:02 @monitor.py:459] val-error-top5: 0.07238
+[1220 19:23:02 @monitor.py:459] xentropy-loss: 0.91597
+[1220 19:23:02 @group.py:48] Callbacks took 37.405 sec in total. DataParallelInferenceRunner: 36.5 seconds
+[1220 19:23:02 @base.py:275] Start Epoch 95 ...
+[1220 19:38:35 @base.py:285] Epoch 95 (global_step 475380) finished, time:15 minutes 33 seconds.
+[1220 19:38:35 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 19:38:36 @saver.py:77] Model saved to train_log/ResNet50-GN/model-475380.
+[1220 19:38:36 @misc.py:109] Estimated Time Left: 2 hours 41 minutes 33 seconds
+[1220 19:39:12 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.71
+[1220 19:39:12 @monitor.py:459] QueueInput/queue_size: 49.594
+[1220 19:39:12 @monitor.py:459] l2_regularize_loss: 0.4766
+[1220 19:39:12 @monitor.py:459] learning_rate: 0.0001
+[1220 19:39:12 @monitor.py:459] train-error-top1: 0.20825
+[1220 19:39:12 @monitor.py:459] train-error-top5: 0.066761
+[1220 19:39:12 @monitor.py:459] val-error-top1: 0.24064
+[1220 19:39:12 @monitor.py:459] val-error-top5: 0.07136
+[1220 19:39:12 @monitor.py:459] xentropy-loss: 0.83965
+[1220 19:39:12 @group.py:48] Callbacks took 37.340 sec in total. DataParallelInferenceRunner: 35.8 seconds
+[1220 19:39:12 @base.py:275] Start Epoch 96 ...
+[1220 19:54:44 @base.py:285] Epoch 96 (global_step 480384) finished, time:15 minutes 31 seconds.
+[1220 19:54:44 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 19:54:45 @saver.py:77] Model saved to train_log/ResNet50-GN/model-480384.
+[1220 19:54:45 @misc.py:109] Estimated Time Left: 2 hours 25 minutes 26 seconds
+[1220 19:55:22 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.499
+[1220 19:55:22 @monitor.py:459] QueueInput/queue_size: 49.849
+[1220 19:55:22 @monitor.py:459] l2_regularize_loss: 0.47627
+[1220 19:55:22 @monitor.py:459] learning_rate: 0.0001
+[1220 19:55:22 @monitor.py:459] train-error-top1: 0.2106
+[1220 19:55:22 @monitor.py:459] train-error-top5: 0.079972
+[1220 19:55:22 @monitor.py:459] val-error-top1: 0.24054
+[1220 19:55:22 @monitor.py:459] val-error-top5: 0.07146
+[1220 19:55:22 @monitor.py:459] xentropy-loss: 0.86871
+[1220 19:55:22 @group.py:48] Callbacks took 38.168 sec in total. DataParallelInferenceRunner: 37.1 seconds
+[1220 19:55:22 @base.py:275] Start Epoch 97 ...
+[1220 20:10:50 @base.py:285] Epoch 97 (global_step 485388) finished, time:15 minutes 28 seconds.
+[1220 20:10:50 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 20:10:52 @saver.py:77] Model saved to train_log/ResNet50-GN/model-485388.
+[1220 20:10:52 @misc.py:109] Estimated Time Left: 2 hours 9 minutes 9 seconds
+[1220 20:11:28 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.463
+[1220 20:11:28 @monitor.py:459] QueueInput/queue_size: 48.987
+[1220 20:11:28 @monitor.py:459] l2_regularize_loss: 0.47594
+[1220 20:11:28 @monitor.py:459] learning_rate: 0.0001
+[1220 20:11:28 @monitor.py:459] train-error-top1: 0.21579
+[1220 20:11:28 @monitor.py:459] train-error-top5: 0.084306
+[1220 20:11:28 @monitor.py:459] val-error-top1: 0.24202
+[1220 20:11:28 @monitor.py:459] val-error-top5: 0.0714
+[1220 20:11:28 @monitor.py:459] xentropy-loss: 0.94184
+[1220 20:11:28 @group.py:48] Callbacks took 37.422 sec in total. DataParallelInferenceRunner: 35.6 seconds
+[1220 20:11:28 @base.py:275] Start Epoch 98 ...
+[1220 20:26:57 @base.py:285] Epoch 98 (global_step 490392) finished, time:15 minutes 28 seconds.
+[1220 20:26:57 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 20:26:57 @saver.py:77] Model saved to train_log/ResNet50-GN/model-490392.
+[1220 20:26:57 @misc.py:109] Estimated Time Left: 1 hour 52 minutes 57 seconds
+[1220 20:27:33 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.526
+[1220 20:27:33 @monitor.py:459] QueueInput/queue_size: 49.969
+[1220 20:27:33 @monitor.py:459] l2_regularize_loss: 0.47561
+[1220 20:27:33 @monitor.py:459] learning_rate: 0.0001
+[1220 20:27:33 @monitor.py:459] train-error-top1: 0.21093
+[1220 20:27:33 @monitor.py:459] train-error-top5: 0.077074
+[1220 20:27:33 @monitor.py:459] val-error-top1: 0.24072
+[1220 20:27:33 @monitor.py:459] val-error-top5: 0.0721
+[1220 20:27:33 @monitor.py:459] xentropy-loss: 0.86085
+[1220 20:27:33 @group.py:48] Callbacks took 36.427 sec in total. DataParallelInferenceRunner: 35.3 seconds
+[1220 20:27:33 @base.py:275] Start Epoch 99 ...
+[1220 20:43:06 @base.py:285] Epoch 99 (global_step 495396) finished, time:15 minutes 33 seconds.
+[1220 20:43:06 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 20:43:07 @saver.py:77] Model saved to train_log/ResNet50-GN/model-495396.
+[1220 20:43:07 @misc.py:109] Estimated Time Left: 1 hour 36 minutes 50 seconds
+[1220 20:43:44 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 26.087
+[1220 20:43:44 @monitor.py:459] QueueInput/queue_size: 46.422
+[1220 20:43:44 @monitor.py:459] l2_regularize_loss: 0.47529
+[1220 20:43:44 @monitor.py:459] learning_rate: 0.0001
+[1220 20:43:44 @monitor.py:459] train-error-top1: 0.21927
+[1220 20:43:44 @monitor.py:459] train-error-top5: 0.079913
+[1220 20:43:44 @monitor.py:459] val-error-top1: 0.24122
+[1220 20:43:44 @monitor.py:459] val-error-top5: 0.07202
+[1220 20:43:44 @monitor.py:459] xentropy-loss: 0.91355
+[1220 20:43:44 @group.py:48] Callbacks took 37.551 sec in total. DataParallelInferenceRunner: 36.6 seconds
+[1220 20:43:44 @base.py:275] Start Epoch 100 ...
+[1220 20:59:17 @base.py:285] Epoch 100 (global_step 500400) finished, time:15 minutes 33 seconds.
+[1220 20:59:17 @graph.py:73] Running Op sync_variables/sync_variables_from_main_tower ...
+[1220 20:59:18 @saver.py:77] Model saved to train_log/ResNet50-GN/model-500400.
+[1220 20:59:18 @misc.py:109] Estimated Time Left: 1 hour 20 minutes 41 seconds
+[1220 20:59:18 @param.py:161] [HyperParamSetter] At global_step=500400, learning_rate changes from 0.000100 to 0.000010
+[1220 20:59:54 @monitor.py:459] DataParallelInferenceRunner/QueueInput/queue_size: 25.536
+[1220 20:59:54 @monitor.py:459] QueueInput/queue_size: 49.857
+[1220 20:59:54 @monitor.py:459] l2_regularize_loss: 0.47496
+[1220 20:59:54 @monitor.py:459] learning_rate: 0.0001
+[1220 20:59:54 @monitor.py:459] train-error-top1: 0.21668
+[1220 20:59:54 @monitor.py:459] train-error-top5: 0.072175
+[1220 20:59:54 @monitor.py:459] val-error-top1: 0.24094
+[1220 20:59:54 @monitor.py:459] val-error-top5: 0.07156
+[1220 20:59:54 @monitor.py:459] xentropy-loss: 0.86541
+[1220 20:59:54 @group.py:48] Callbacks took 36.771 sec in total. DataParallelInferenceRunner: 35.4 seconds
