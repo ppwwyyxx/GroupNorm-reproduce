@@ -1,12 +1,10 @@
 #!/usr/bin/env python
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 # File: imagenet-resnet-gnwd.py
 
 import argparse
-import numpy as np
 import os
 import tensorflow as tf
-
 
 from tensorpack import logger, QueueInput
 from tensorpack.models import *
@@ -18,7 +16,7 @@ from tensorpack.tfutils import argscope, get_model_loader
 from tensorpack.utils.gpu import get_num_gpu
 
 from imagenet_utils import (
-    fbresnet_augmentor, get_imagenet_dataflow, ImageNetModel,
+    get_imagenet_dataflow, ImageNetModel,
     eval_on_ILSVRC12)
 from resnet_model import (
     resnet_group, resnet_bottleneck, resnet_backbone)
@@ -53,7 +51,7 @@ def get_config(model, fake=False):
         logger.info("Running on {} towers. Batch size per tower: {}".format(nr_tower, batch))
 
         dataset_train = get_imagenet_dataflow(args.data, 'train', batch)
-        dataset_val = get_imagenet_dataflow(args.data, 'val', batch)
+        dataset_val = get_imagenet_dataflow(args.data, 'val', min(64, batch))
         steps_per_epoch = 1281167 // args.batch
 
         BASE_LR = 0.1 * args.batch / 256.0
