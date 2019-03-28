@@ -28,8 +28,10 @@ class Model(ImageNetModel):
 
     image_dtype = tf.float32
 
+    depth = 50
+
     def get_logits(self, image):
-        num_blocks = [3, 4, 6, 3]
+        num_blocks = {50:[3, 4, 6, 3], 101:[3,4,23,3]}[self.depth]
         block_func = resnet_bottleneck
         with argscope([Conv2D, MaxPooling, GlobalAvgPooling], data_format=self.data_format):
             return resnet_backbone(
@@ -96,10 +98,12 @@ if __name__ == '__main__':
     parser.add_argument('--fake', help='use fakedata to test or benchmark this model', action='store_true')
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--batch', default=256, type=int, help='total batch size.')
+    parser.add_argument('--depth', type=int, default=50)
     parser.add_argument('--logdir', default='train_log/ResNet50-GN')
     args = parser.parse_args()
 
     model = Model()
+    model.depth = args.depth
     if args.eval:
         batch = 128    # something that can run on one gpu
         ds = get_imagenet_dataflow(args.data, 'val', batch)
