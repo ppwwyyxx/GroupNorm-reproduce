@@ -22,3 +22,7 @@ Training logs for ResNet50 & ResNet101 is included.
 The code is modified slightly from [Tensorpack ResNet examples](https://github.com/tensorpack/tensorpack/tree/master/examples/ResNet).
 
 A trained ResNet50 model is available at [Tensorpack model zoo](http://models.tensorpack.com/FasterRCNN/ImageNet-R50-GroupNorm32-AlignPadding.npz).
+It can be evaluated with:
+```
+./imagenet-resnet-gn.py --data /path/to/imagenet -d 50 --eval --load model.npz
+```

@@ -8,11 +8,11 @@ to trust any implementation (including your own) without reproducing results.
 
 ## Official Code
 
-+ [Object Detection with Mask R-CNN, in Caffe2](https://github.com/facebookresearch/Detectron/tree/master/projects/GN).
++ [Object Detection with Mask R-CNN, in Caffe2](https://github.com/facebookresearch/Detectron/tree/master/projects/GN), with models.
 
 ## Unofficial Code
 
-+ [ImageNet Classification with ResNet50, in TensorFlow](ImageNet-ResNet-TensorFlow/). Exactly reproduce.
++ [ImageNet Classification with ResNet50, in TensorFlow](ImageNet-ResNet-TensorFlow/), with models. Exactly reproduce.
 
 + [ImageNet Classification with ResNet50, in PyTorch](ImageNet-ResNet-PyTorch/).
   0.1% different result due to fewer augmentations.
@@ -20,8 +20,8 @@ to trust any implementation (including your own) without reproducing results.
 + [ImageNet Classification with VGG16, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/ImageNetModels#vgg16).
   Exactly reproduce.
 
-+ [Object Detection with Mask R-CNN, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN).
-  Slighly different results due to different implementation of Mask R-CNN framework.
++ [Object Detection with Mask R-CNN, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN), with models.
+  Slighly better results due to different implementation of Mask R-CNN framework.
 
 ## Not in the Paper
 
