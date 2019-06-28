@@ -41,8 +41,8 @@ class Model(ImageNetModel):
                 return v
             if (not v.name.endswith('/W:0')) or v.shape.ndims != 4:
                 return v
-            mean, std = tf.nn.moments(v, [0, 1, 2], keep_dims=True)
-            v = (v - mean) / (std + 1e-5)
+            mean, var = tf.nn.moments(v, [0, 1, 2], keep_dims=True)
+            v = (v - mean) / (tf.sqrt(var)+ 1e-5)
             return v
 
         num_blocks = {50: [3, 4, 6, 3], 101: [3, 4, 23, 3]}[self.depth]
