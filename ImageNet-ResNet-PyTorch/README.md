@@ -13,3 +13,8 @@ Training takes ~26 hours on 8 V100s. A training log is included.
 
 The code is modified slightly from [pytorch official examples](https://github.com/pytorch/examples/tree/master/imagenet)
 and uses the same data augmentations available there.
+
+To evaluate with the [pretrained model](https://github.com/ppwwyyxx/GroupNorm-reproduce/releases/tag/v0.1):
+```
+python main.py /path/to/imagenet/ -e --resume model.pth --batch 64
+```
