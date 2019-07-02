@@ -31,7 +31,9 @@ class Model(ImageNetModel):
 
     use_WS = False
     """
-    Whether to use Weight Standardization (https://arxiv.org/abs/1903.10520)
+    Whether to use Centered Weight Normalization
+    (http://openaccess.thecvf.com/content_ICCV_2017/papers/Huang_Centered_Weight_Normalization_ICCV_2017_paper.pdf),
+    or Weight Standardization (https://arxiv.org/abs/1903.10520)
     """
 
     def get_logits(self, image):
