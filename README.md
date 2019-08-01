@@ -12,12 +12,12 @@ to trust any implementation (including your own) without reproducing results.
 
 ## Unofficial Code
 
-+ [ImageNet Classification with ResNet50, in TensorFlow](ImageNet-ResNet-TensorFlow/), with models. Exactly reproduce.
++ [ImageNet Classification with ResNet-50, in TensorFlow](ImageNet-ResNet-TensorFlow/), with models. Exactly reproduce.
 
-+ [ImageNet Classification with ResNet50, in PyTorch](ImageNet-ResNet-PyTorch/), with models.
++ [ImageNet Classification with ResNet-50, in PyTorch](ImageNet-ResNet-PyTorch/), with models.
   0.1% different result due to fewer augmentations.
 
-+ [ImageNet Classification with VGG16, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/ImageNetModels#vgg16).
++ [ImageNet Classification with VGG-16, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/ImageNetModels#vgg16).
   Exactly reproduce.
 
 + [Object Detection with Mask R-CNN, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN), with models.

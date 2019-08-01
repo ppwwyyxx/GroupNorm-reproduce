@@ -14,15 +14,15 @@ evaluated by the median of last 5 epochs. This matches the performance in the pa
 
 Training a ResNet-50 takes ~27 hours on 8 V100s.
 
-Training a ResNet-101 with this script should reach 22.4~22.5 top-1 validation error.
+Training a ResNet-101 with this script should reach 22.5~22.6 top-1 validation error.
 
 Training logs for ResNet-50 & ResNet-101 are included.
 
-
 The code is modified slightly from [Tensorpack ResNet examples](https://github.com/tensorpack/tensorpack/tree/master/examples/ResNet).
 
-A trained ResNet-50 model is available at [Tensorpack model zoo](http://models.tensorpack.com/FasterRCNN/ImageNet-R50-GroupNorm32-AlignPadding.npz).
-It can be evaluated with:
+Trained [ResNet-50](http://models.tensorpack.com/FasterRCNN/ImageNet-R50-GroupNorm32-AlignPadding.npz) &
+[ResNet-101](http://models.tensorpack.com/FasterRCNN/ImageNet-R101-GroupNorm32-AlignPadding.npz) models are available at [Tensorpack model zoo](http://models.tensorpack.com).
+They can be evaluated with:
 ```
-./imagenet-resnet-gn.py --data /path/to/imagenet -d 50 --eval --load model.npz
+./imagenet-resnet-gn.py --data /path/to/imagenet -d [50/101] --eval --load model.npz
 ```
