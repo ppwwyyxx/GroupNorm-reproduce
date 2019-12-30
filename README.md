@@ -23,7 +23,7 @@ to trust any implementation (including your own) without reproducing results.
 + [Object Detection with Mask R-CNN, in TensorFlow](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN), with models.
   Slighly better results due to different implementation of Mask R-CNN framework.
   
-  + [Object Detection with Mask R-CNN, in PyTorch](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md#other-settings), with models.
++ [Object Detection with Mask R-CNN, in PyTorch](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md#other-settings), with models.
   Slighly better results due to different implementation of Mask R-CNN framework.
 
 ## Not in the Paper
