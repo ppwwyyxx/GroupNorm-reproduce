@@ -15,7 +15,7 @@ from tensorpack.dataflow.imgaug import AugmentorList
 from tensorpack import ModelDesc
 from tensorpack.input_source import QueueInput, StagingInput
 from tensorpack.dataflow import (
-    imgaug, dataset, AugmentImageComponent, PrefetchDataZMQ,
+    imgaug, dataset, AugmentImageComponent, MultiProcessRunnerZMQ,
     BatchData, MultiThreadMapData)
 from tensorpack.predict import PredictConfig, FeedfreePredictor
 from tensorpack.utils.stats import RatioCounter
@@ -95,7 +95,7 @@ def get_imagenet_dataflow(
         ds = dataset.ILSVRC12Files(datadir, name, shuffle=False)
         ds = MultiThreadMapData(ds, parallel, mapf, buffer_size=2000, strict=True)
         ds = BatchData(ds, batch_size, remainder=True)
-        ds = PrefetchDataZMQ(ds, 1)
+        ds = MultiProcessRunnerZMQ(ds, 1)
     return ds
 
 
@@ -164,8 +164,8 @@ class ImageNetModel(ModelDesc):
     label_smoothing = 0.
 
     def inputs(self):
-        return [tf.placeholder(self.image_dtype, [None, self.image_shape, self.image_shape, 3], 'input'),
-                tf.placeholder(tf.int32, [None], 'label')]
+        return [tf.TensorSpec([None, self.image_shape, self.image_shape, 3], self.image_dtype, 'input'),
+                tf.TensorSpec([None], tf.int32, 'label')]
 
     def build_graph(self, image, label):
         image = self.image_preprocess(image)
