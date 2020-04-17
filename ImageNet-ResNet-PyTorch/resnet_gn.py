@@ -18,33 +18,33 @@ class Bottleneck(nn.Module):
     def __init__(self, inplanes, planes, stride=1, downsample=None):
         super(Bottleneck, self).__init__()
         self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=1, bias=False)
-        self.bn1 = nn.GroupNorm(32, planes)
+        self.gn1 = nn.GroupNorm(32, planes)
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=stride,
                                padding=1, bias=False)
-        self.bn2 = nn.GroupNorm(32, planes)
+        self.gn2 = nn.GroupNorm(32, planes)
         self.conv3 = nn.Conv2d(planes, planes * 4, kernel_size=1, bias=False)
-        self.bn3 = nn.GroupNorm(32, planes * 4)
+        self.gn3 = nn.GroupNorm(32, planes * 4)
         self.relu = nn.ReLU(inplace=True)
         self.downsample = downsample
         self.stride = stride
 
-        gn_init(self.bn1)
-        gn_init(self.bn2)
-        gn_init(self.bn3, zero_init=True)
+        gn_init(self.gn1)
+        gn_init(self.gn2)
+        gn_init(self.gn3, zero_init=True)
 
     def forward(self, x):
         residual = x
 
         out = self.conv1(x)
-        out = self.bn1(out)
+        out = self.gn1(out)
         out = self.relu(out)
 
         out = self.conv2(out)
-        out = self.bn2(out)
+        out = self.gn2(out)
         out = self.relu(out)
 
         out = self.conv3(out)
-        out = self.bn3(out)
+        out = self.gn3(out)
 
         if self.downsample is not None:
             residual = self.downsample(x)
@@ -73,7 +73,7 @@ class ResNet(nn.Module):
         super(ResNet, self).__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3,
                                bias=False)
-        self.bn1 = nn.GroupNorm(32, 64)
+        self.gn1 = nn.GroupNorm(32, 64)
         self.relu = nn.ReLU(inplace=True)
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
         self.layer1 = self._make_layer(block, 64, layers[0])
@@ -86,7 +86,7 @@ class ResNet(nn.Module):
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 conv2d_init(m)
-        gn_init(self.bn1)
+        gn_init(self.gn1)
 
     def _make_layer(self, block, planes, blocks, stride=1):
         downsample = None
@@ -110,7 +110,7 @@ class ResNet(nn.Module):
 
     def forward(self, x):
         x = self.conv1(x)
-        x = self.bn1(x)
+        x = self.gn1(x)
         x = self.relu(x)
         x = self.maxpool(x)
 
