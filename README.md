@@ -1,16 +1,12 @@
 
-A collection of code in different frameworks, that __reproduces__ several experiment results in the paper:
+A collection of verified code in different frameworks, that __reproduces__ several experiment results in the paper:
 
 + [Group Normalization](https://arxiv.org/abs/1803.08494) - Best Paper Honorable Mention at ECCV 2018.
 
-There are a number of implementations of this paper online, however it's unsafe
-to trust any implementation (including your own) without reproducing results.
 
-## Official Code
+## Reproduced Experiments from the Paper:
 
-+ [Object Detection with Mask R-CNN, in Caffe2](https://github.com/facebookresearch/Detectron/tree/master/projects/GN), with models.
-
-## Unofficial Code
++ [Object Detection with Mask R-CNN, in Caffe2](https://github.com/facebookresearch/Detectron/tree/master/projects/GN), with models. Official models for the paper.
 
 + [ImageNet Classification with ResNet-50, in TensorFlow](ImageNet-ResNet-TensorFlow/), with models. Exactly reproduce.
 
